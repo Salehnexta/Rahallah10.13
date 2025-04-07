@@ -5,6 +5,8 @@ Combines flight and hotel options into complete trip plans
 import os
 import logging
 import json
+import re
+import random
 from datetime import datetime, timedelta
 from typing import Dict, Any, List, Optional
 from .flight_booking_agent import FlightBookingAgent
@@ -43,6 +45,9 @@ class TripPlanningAgent:
         try:
             logger.info(f"Processing trip planning request: {message}")
             
+            # Check if this is a request for an itinerary
+            is_itinerary_request = self._is_itinerary_request(message)
+            
             # Extract origin and destination from message
             trip_details = self._extract_trip_details(message)
             
@@ -65,15 +70,30 @@ class TripPlanningAgent:
             # Create trip packages combining flights and hotels
             trip_packages = self._create_trip_packages(flight_data, hotel_data)
             
-            # Generate response text based on language
-            response_text = self._format_response(trip_packages, trip_details, language)
-            
-            return {
-                "text": response_text,
-                "intent": "trip_planning",
-                "mock_data": {"trip_packages": trip_packages},
-                "success": True
-            }
+            if is_itinerary_request:
+                # Generate a detailed itinerary for the requested location and duration
+                days = self._extract_trip_duration(message)
+                itinerary = self._generate_itinerary(trip_details["destination"], days, language)
+                
+                # Generate response text with itinerary information
+                response_text = self._format_itinerary_response(itinerary, trip_details, language)
+                
+                return {
+                    "text": response_text,
+                    "intent": "trip_planning",
+                    "mock_data": {"trip_packages": trip_packages, "itinerary": itinerary},
+                    "success": True
+                }
+            else:
+                # Generate standard response with package options
+                response_text = self._format_response(trip_packages, trip_details, language)
+                
+                return {
+                    "text": response_text,
+                    "intent": "trip_planning",
+                    "mock_data": {"trip_packages": trip_packages},
+                    "success": True
+                }
             
         except Exception as e:
             logger.error(f"Error processing trip planning request: {str(e)}")
@@ -200,333 +220,278 @@ class TripPlanningAgent:
                     response += f"  {i+1}. {package.get('name')} - Total: {package.get('total_price')} {package.get('currency')}\n"
                     response += f"     Includes {package.get('flight', {}).get('airline')} flight and stay at {package.get('hotel', {}).get('name')}\n"
                 
-                response += "\nTo book any of these packages, please let me know which option you prefer!"
+                response += "\n\nTo book any of these packages, please let me know which option you prefer!"
             
             return response
         except Exception as e:
-            logger.error(f"Error formatting trip response: {str(e)}")
+            logger.error(f"Error formatting response: {str(e)}")
             if language.lower() == "arabic":
-                return "عذراً، واجهت مشكلة في إنشاء الحزم السياحية. يرجى المحاولة مرة أخرى لاحقاً."
+                return "عذراً، حدث خطأ أثناء عرض حزم السفر. يرجى المحاولة مرة أخرى لاحقاً."
             else:
                 return "Sorry, I encountered an issue creating your travel packages. Please try again later."
-    
-    def _extract_trip_details(self, message):
+
+    def _is_itinerary_request(self, message):
         """
-        Extract trip details from user message
+        Check if the message is requesting an itinerary
         
         Args:
             message (str): User's message
             
         Returns:
-            dict: Extracted trip details with default values
+            bool: True if itinerary request, False otherwise
         """
-        # Initialize with default values
-        trip_details = {
-            "origin": "Riyadh",
-            "destination": "Jeddah",
-            "departure_date": (datetime.now() + timedelta(days=7)).strftime("%Y-%m-%d"),
-            "return_date": (datetime.now() + timedelta(days=10)).strftime("%Y-%m-%d"),
-            "travelers": 2,
-            "duration": 3,
-            "interests": ["Sightseeing", "Shopping"]
-        }
+        message_lower = message.lower()
+        itinerary_keywords = [
+            "itinerary", "plan", "schedule", "things to do", "activities", "attractions", "places to visit",
+            "tourist spots", "sightseeing", "day plan", "day trip", "day-by-day", "day itinerary"
+        ]
         
-        try:
-            # Common airport codes to city mappings
-            airport_codes = {
-                "DMM": "Dammam",
-                "RUH": "Riyadh",
-                "JED": "Jeddah",
-                "BKK": "Bangkok",
-                "DXB": "Dubai",
-                "DOH": "Doha",
-                "LHR": "London",
-                "JFK": "New York",
-                "CDG": "Paris",
-                "MAD": "Madrid"
-            }
-            
-            import re
-            
-            # Enhanced patterns to extract origins and destinations, including airport codes
-            from_patterns = [
-                # Standard patterns for origin
-                r"from\s+([A-Za-z\s]+)\s+to",  # from City to
-                r"from\s+([A-Za-z\s]+)\b",     # from City
-                r"(DMM|RUH|JED|BKK|DXB|DOH|LHR|JFK|CDG|MAD)\s+to",  # Airport code to
-                r"from\s+(DMM|RUH|JED|BKK|DXB|DOH|LHR|JFK|CDG|MAD)\b"  # from Airport code
-            ]
-            
-            to_patterns = [
-                # Standard patterns for destination
-                r"to\s+([A-Za-z\s]+)",         # to City
-                r"to\s+(DMM|RUH|JED|BKK|DXB|DOH|LHR|JFK|CDG|MAD)\b",  # to Airport code
-                r"\b(DMM|RUH|JED|BKK|DXB|DOH|LHR|JFK|CDG|MAD)(?:\s|$)"  # just Airport code
-            ]
-            
-            # Look for origin patterns
-            for pattern in from_patterns:
-                from_match = re.search(pattern, message, re.IGNORECASE)
-                if from_match and from_match.group(1).strip():
-                    origin = from_match.group(1).strip().upper()
-                    # If it's an airport code, convert to city name
-                    if origin in airport_codes:
-                        trip_details["origin"] = airport_codes[origin]
-                    else:
-                        trip_details["origin"] = origin
-                    break  # Stop after first match
-            
-            # Look for destination patterns
-            for pattern in to_patterns:
-                to_match = re.search(pattern, message, re.IGNORECASE)
-                if to_match and to_match.group(1).strip():
-                    destination = to_match.group(1).strip().upper()
-                    # If it's an airport code, convert to city name
-                    if destination in airport_codes:
-                        trip_details["destination"] = airport_codes[destination]
-                    else:
-                        trip_details["destination"] = destination
-                    break  # Stop after first match
-            
-            # More specific patterns for "X to Y" format
-            city_to_city = re.search(r"([A-Za-z]{3})\s+to\s+([A-Za-z]{3})", message, re.IGNORECASE)
-            if city_to_city:
-                origin_code = city_to_city.group(1).upper()
-                dest_code = city_to_city.group(2).upper()
-                if origin_code in airport_codes:
-                    trip_details["origin"] = airport_codes[origin_code]
-                if dest_code in airport_codes:
-                    trip_details["destination"] = airport_codes[dest_code]
-            
-            # Handle "BKK from DMM" pattern 
-            dest_from_origin = re.search(r"([A-Za-z]{3})\s+from\s+([A-Za-z]{3})", message, re.IGNORECASE)
-            if dest_from_origin:
-                dest_code = dest_from_origin.group(1).upper()
-                origin_code = dest_from_origin.group(2).upper()
-                if origin_code in airport_codes:
-                    trip_details["origin"] = airport_codes[origin_code]
-                if dest_code in airport_codes:
-                    trip_details["destination"] = airport_codes[dest_code]
-            
-            # Extract dates (YYYY-MM-DD format)
-            date_pattern = r"\d{4}-\d{2}-\d{2}"
-            dates = re.findall(date_pattern, message)
-            if dates:
-                trip_details['departure_date'] = dates[0]
-                if len(dates) > 1:
-                    trip_details['return_date'] = dates[1]
-            
-            # Handle relative date references
-            after_months_match = re.search(r"after\s+(\d+)\s+months?", message, re.IGNORECASE)
-            if after_months_match:
-                months = int(after_months_match.group(1))
-                departure_date = datetime.now() + timedelta(days=30*months)
-                return_date = departure_date + timedelta(days=7)  # Default 7-day trip
-                trip_details['departure_date'] = departure_date.strftime("%Y-%m-%d")
-                trip_details['return_date'] = return_date.strftime("%Y-%m-%d")
-            
-            # Handle "next week/month" patterns
-            if "next week" in message.lower():
-                departure_date = datetime.now() + timedelta(days=7)
-                return_date = departure_date + timedelta(days=7)
-                trip_details['departure_date'] = departure_date.strftime("%Y-%m-%d")
-                trip_details['return_date'] = return_date.strftime("%Y-%m-%d")
-            elif "next month" in message.lower():
-                departure_date = datetime.now() + timedelta(days=30)
-                return_date = departure_date + timedelta(days=7)
-                trip_details['departure_date'] = departure_date.strftime("%Y-%m-%d")
-                trip_details['return_date'] = return_date.strftime("%Y-%m-%d")
-            
-            # Look for travelers count
-            traveler_pattern = r"(\d+)\s+(?:traveler|passenger|people|person)s?"
-            traveler_match = re.search(traveler_pattern, message, re.IGNORECASE)
-            if traveler_match:
-                trip_details['travelers'] = int(traveler_match.group(1))
-            
-            # Calculate duration based on dates
-            try:
-                departure = datetime.strptime(trip_details['departure_date'], '%Y-%m-%d')
-                return_date = datetime.strptime(trip_details['return_date'], '%Y-%m-%d')
-                trip_details['duration'] = (return_date - departure).days
-            except:
-                # Keep default duration if date parsing fails
-                pass
-            
-            # Extract interests
-            interest_keywords = {
-                "beach": ["beach", "swimming", "ocean", "sea"],
-                "culture": ["culture", "museum", "history", "art"],
-                "adventure": ["adventure", "hiking", "safari", "outdoor"],
-                "shopping": ["shopping", "mall", "souq", "market"],
-                "food": ["food", "cuisine", "restaurant", "dining"],
-                "relaxation": ["spa", "resort", "relax", "peaceful"],
-                "sightseeing": ["sightseeing", "landmark", "tourist"]
-            }
-            
-            interests = []
-            for interest, keywords in interest_keywords.items():
-                if any(keyword in message.lower() for keyword in keywords):
-                    interests.append(interest.capitalize())
-            
-            if interests:
-                trip_details['interests'] = interests
-            
-            logger.info(f"Extracted trip details: {trip_details}")
-            return trip_details
-            
-        except Exception as e:
-            logger.error(f"Error extracting trip info: {str(e)}")
-            # Return the defaults since we already set them
-            return trip_details
+        # Check for presence of itinerary-related keywords
+        return any(keyword in message_lower for keyword in itinerary_keywords)
     
-    def _format_trip_response(self, llm_response, trip_info):
-        """Format the trip plan response"""
-        try:
-            # Extract JSON if it's in the response
-            json_start = llm_response.find('{')
-            json_end = llm_response.rfind('}') + 1
-            if json_start != -1 and json_end != -1:
-                trip_data = json.loads(llm_response[json_start:json_end])
-                
-                # Format the response with both text and structured data
-                formatted = f"""
-                Here's your trip plan to {trip_info['destination']}:
-                
-                {llm_response[:json_start].strip()}
-                
-                Total Price: {trip_data.get('total_price', 'N/A')} SAR
-                """
-                return formatted
-            
-            return llm_response
-            
-        except Exception as e:
-            logger.error(f"Error formatting trip response: {str(e)}")
-            return "I apologize, there was an error formatting your trip plan."
-    
-    def _create_trip_packages(self, flight_data, hotel_data):
+    def _extract_trip_duration(self, message):
         """
-        Combine flight and hotel options into complete trip packages
+        Extract the requested duration of the trip in days
         
         Args:
-            flight_data (list): List of flight options
-            hotel_data (list): List of hotel options
+            message (str): User's message
             
         Returns:
-            list: List of trip packages combining flights and hotels
+            int: Number of days for the trip, defaults to 3
         """
-        try:
-            # Initialize empty list for trip packages
-            trip_packages = []
-            
-            # Handle empty input data
-            if not flight_data or not hotel_data:
-                logger.warning("No flight or hotel data available to create packages")
-                return trip_packages
-            
-            # Ensure at least 5 options when available
-            max_flights = min(len(flight_data), 5)
-            max_hotels = min(len(hotel_data), 5)
-            
-            # Create combinations of flights and hotels
-            for i in range(max_flights):
-                flight = flight_data[i]
-                # Ensure required flight fields exist
-                flight.setdefault('airline', "Unknown Airline")
-                flight.setdefault('flight_number', "XXX")
-                flight.setdefault('price', 0)
-                flight.setdefault('currency', "SAR")
-                
-                for j in range(max_hotels):
-                    hotel = hotel_data[j]
-                    # Ensure required hotel fields exist
-                    hotel.setdefault('name', "Unknown Hotel")
-                    hotel.setdefault('star_rating', 3)
-                    hotel.setdefault('price_per_night', 0)
-                    hotel.setdefault('currency', "SAR")
-                    
-                    # Create a package with one flight and one hotel
-                    # Calculate total price based on hotel nights and flight cost
-                    package_name = f"{flight.get('airline')} + {hotel.get('name')}"
-                    
-                    # Default to 3 nights if check_in/check_out not available
-                    nights = 3
-                    if 'check_in' in hotel and 'check_out' in hotel:
-                        try:
-                            from datetime import datetime
-                            check_in = datetime.strptime(hotel['check_in'], '%Y-%m-%d')
-                            check_out = datetime.strptime(hotel['check_out'], '%Y-%m-%d')
-                            nights = (check_out - check_in).days
-                            nights = max(1, nights)  # Ensure at least 1 night
-                        except:
-                            nights = 3  # Default if date parsing fails
-                    
-                    # Calculate total price
-                    hotel_total = hotel.get('price_per_night', 0) * nights
-                    flight_price = flight.get('price', 0)
-                    total_price = hotel_total + flight_price
-                    
-                    # Use hotel currency as default for package
-                    currency = hotel.get('currency', 'SAR')
-                    
-                    # Create package object
-                    package = {
-                        "name": package_name,
-                        "flight": flight,
-                        "hotel": hotel,
-                        "nights": nights,
-                        "total_price": total_price,
-                        "currency": currency,
-                        "description": f"Flight with {flight.get('airline')} and {nights} nights at {hotel.get('name')}"
-                    }
-                    
-                    trip_packages.append(package)
-            
-            logger.info(f"Created {len(trip_packages)} trip packages")
-            return trip_packages
-            
-        except Exception as e:
-            logger.error(f"Error creating trip packages: {str(e)}")
-            return []  # Return empty list on error
+        message_lower = message.lower()
+        
+        # Look for number of days mentioned
+        days_match = re.search(r"(\d+)[\s-]*day", message_lower)
+        if days_match:
+            try:
+                return int(days_match.group(1))
+            except ValueError:
+                pass
+        
+        # Default to 3 days if no specific duration found
+        return 3
     
-    def _generate_mock_trip_data(self, trip_info):
-        """Generate mock data for a complete trip plan"""
-        try:
-            # Generate mock flight data
-            flight_data = {
-                "airline": "Saudia",
-                "flight_number": "SV123",
-                "departure": trip_info["start_date"],
-                "return": trip_info["end_date"],
-                "price": "1200 SAR"
-            }
+    def _extract_trip_details(self, message):
+        """
+        Extract trip origin and destination from message
+        
+        Args:
+            message (str): User's message
             
-            # Generate mock hotel data
-            hotel_data = {
-                "name": "Luxury Hotel Riyadh",
-                "rating": 5,
-                "location": "Downtown Riyadh",
-                "price_per_night": "800 SAR",
-                "total_price": str(int(flight_data["price"].split()[0]) + 
-                                 int(hotel_data["price_per_night"].split()[0]) * trip_info["duration"]) + " SAR"
-            }
-            
-            return {
-                "flight": flight_data,
-                "hotel": hotel_data,
-                "total_price": hotel_data["total_price"],
-                "activities": self._generate_mock_activities(trip_info["destination"])  # TO DO: Implement activity generation
-            }
-            
-        except Exception as e:
-            logger.error(f"Error generating mock trip data: {str(e)}")
-            return {}
+        Returns:
+            dict: Dictionary with origin and destination
+        """
+        # Default values
+        origin = "Riyadh"
+        destination = "Jeddah"
+        
+        # Try to extract origin and destination from message
+        message_lower = message.lower()
+        
+        # Look for common patterns like "from X to Y"
+        from_to_match = re.search(r"from\s+([a-zA-Z\s]+)\s+to\s+([a-zA-Z\s]+)", message_lower)
+        if from_to_match:
+            origin = from_to_match.group(1).strip().title()
+            destination = from_to_match.group(2).strip().title()
+        
+        # Look for specific mentions of cities
+        cities = ["Riyadh", "Jeddah", "Makkah", "Madinah", "Dammam", "Abha", "AlUla", "Tabuk"]
+        mentioned_cities = [city for city in cities if city.lower() in message_lower]
+        
+        if len(mentioned_cities) >= 2:
+            # Assume first mention is origin, second is destination
+            origin = mentioned_cities[0]
+            destination = mentioned_cities[1]
+        elif len(mentioned_cities) == 1:
+            # Assume destination is mentioned
+            destination = mentioned_cities[0]
+        
+        # Special handling for "in X" which usually means destination
+        in_match = re.search(r"in\s+([a-zA-Z\s]+)", message_lower)
+        if in_match:
+            destination = in_match.group(1).strip().title()
+        
+        return {
+            "origin": origin,
+            "destination": destination,
+            "departure_date": datetime.now().strftime("%Y-%m-%d")
+        }
     
-    def _generate_mock_activities(self, destination):
-        """Generate mock tourist activities for the destination"""
-        # TO DO: Implement activity generation based on destination
-        return []
-
+    def _generate_itinerary(self, destination, days, language):
+        """
+        Generate a detailed day-by-day itinerary for the destination
+        
+        Args:
+            destination (str): Destination city
+            days (int): Number of days for the trip
+            language (str): Language of the response
+            
+        Returns:
+            list: List of dictionaries with daily activities
+        """
+        # Generate itinerary for the specified number of days
+        itinerary = []
+        
+        # Mock attractions for different cities in Saudi Arabia
+        attractions = {
+            "Riyadh": [
+                "Kingdom Centre Tower", "National Museum of Saudi Arabia",
+                "Masmak Fortress", "Diriyah", "King Abdullah Park", 
+                "Riyadh Zoo", "Wadi Hanifah", "Edge of the World", 
+                "Al Bujairi Heritage Park", "King Abdulaziz Historical Center"
+            ],
+            "Jeddah": [
+                "Al-Balad (Historic Jeddah)", "Jeddah Corniche", 
+                "King Fahd's Fountain", "Fakieh Aquarium", "Jeddah Sculpture Museum", 
+                "Floating Mosque", "Red Sea Mall", "Atallah Happy Land Park", 
+                "Al Shallal Theme Park", "Jeddah Jungle"
+            ],
+            "Makkah": [
+                "Masjid Al-Haram", "Abraj Al-Bait", "Jabal al-Nour", 
+                "Jabal Thawr", "Makkah Museum", "Mina", 
+                "Muzdalifah", "Arafat", "Al Noor Mall", "Makkah Mall"
+            ],
+            "Madinah": [
+                "Al-Masjid an-Nabawi", "Quba Mosque", "Jannat al-Baqi", 
+                "Masjid al-Qiblatain", "Mount Uhud", "The Seven Mosques", 
+                "Al Noor Mall", "Prophet's Mosque Museum", "Old Bazaar", 
+                "Al Baqi Cemetery"
+            ],
+            "AlUla": [
+                "Hegra Archaeological Site", "Elephant Rock", "AlUla Old Town", 
+                "Dadan", "Jabal Ikmah", "AlUla Oasis", "Maraya Concert Hall", 
+                "Al-Khuraybah", "Hijaz Railway Station", "Desert X AlUla"
+            ],
+            "Abha": [
+                "Abha Palace", "Green Mountain", "Habala Village", 
+                "Rijal Alma Village", "Abha Dam Lake", "Al Sooda Mountain", 
+                "Cable Car", "Shada Mountain", "Abha Cultural Palace", "Asir National Park"
+            ]
+        }
+        
+        # Default to destination's attractions if not found
+        city_attractions = attractions.get(destination, attractions.get("Riyadh"))
+        
+        # Generate activities for each day
+        for day in range(1, days + 1):
+            # Shuffle attractions to get random selection each time
+            random.shuffle(city_attractions)
+            
+            # Pick 3 attractions for this day
+            day_attractions = city_attractions[:3]
+            
+            # Create morning, afternoon, and evening activities
+            daily_itinerary = {
+                "day": day,
+                "morning": {
+                    "activity": f"Visit {day_attractions[0]}",
+                    "description": f"Explore the magnificent {day_attractions[0]} in the morning when it's less crowded."
+                },
+                "afternoon": {
+                    "activity": f"Explore {day_attractions[1]}",
+                    "description": f"After lunch, spend your afternoon at {day_attractions[1]} and enjoy the local culture."
+                },
+                "evening": {
+                    "activity": f"Experience {day_attractions[2]}",
+                    "description": f"In the evening, relax and enjoy your time at {day_attractions[2]} followed by dinner at a local restaurant."
+                }
+            }
+            
+            itinerary.append(daily_itinerary)
+            
+            # Rotate the attractions to avoid repeating on consecutive days
+            city_attractions = city_attractions[3:] + city_attractions[:3]
+        
+        return itinerary
+    
+    def _format_itinerary_response(self, itinerary, trip_details, language):
+        """
+        Format the itinerary response message based on language
+        
+        Args:
+            itinerary (list): List of daily itinerary dictionaries
+            trip_details (dict): Dictionary with origin and destination
+            language (str): Language of the conversation ("english" or "arabic")
+            
+        Returns:
+            str: Formatted itinerary response message
+        """
+        destination = trip_details.get("destination", "your destination")
+        
+        if language.lower() == "arabic":
+            # Arabic response
+            response = f"مرحبًا! إليك خطة رحلة مفصلة إلى {destination}:\n\n"
+            
+            for day in itinerary:
+                response += f"🗓️ اليوم {day['day']}:\n"
+                response += f"   🌅 الصباح: {day['morning']['activity']}\n"
+                response += f"      {day['morning']['description']}\n"
+                response += f"   🌞 بعد الظهر: {day['afternoon']['activity']}\n"
+                response += f"      {day['afternoon']['description']}\n"
+                response += f"   🌆 المساء: {day['evening']['activity']}\n"
+                response += f"      {day['evening']['description']}\n\n"
+            
+            response += "هذه خطة رحلة مقترحة. هل ترغب في تعديلها أو حجز تذاكر طيران وفنادق؟"
+            
+        else:
+            # English response
+            response = f"Hello! Here's a detailed itinerary for your trip to {destination}:\n\n"
+            
+            for day in itinerary:
+                response += f"🗓️ Day {day['day']}:\n"
+                response += f"   🌅 Morning: {day['morning']['activity']}\n"
+                response += f"      {day['morning']['description']}\n"
+                response += f"   🌞 Afternoon: {day['afternoon']['activity']}\n"
+                response += f"      {day['afternoon']['description']}\n"
+                response += f"   🌆 Evening: {day['evening']['activity']}\n"
+                response += f"      {day['evening']['description']}\n\n"
+            
+            response += "This is a suggested itinerary. Would you like to modify it or book flights and hotels?"
+        
+        return response
+    
+    def _create_trip_packages(self, flights, hotels):
+        """
+        Create trip packages by combining flight and hotel options
+        
+        Args:
+            flights (list): List of flight dictionaries
+            hotels (list): List of hotel dictionaries
+            
+        Returns:
+            list: List of trip package dictionaries
+        """
+        # If no flights or hotels, return empty list
+        if not flights or not hotels:
+            return []
+            
+        # Create at least 5 package options with various combinations
+        packages = []
+        for i in range(min(12, max(5, len(flights) * len(hotels)))):
+            flight_idx = i % len(flights)
+            hotel_idx = (i // len(flights)) % len(hotels)
+            
+            flight = flights[flight_idx]
+            hotel = hotels[hotel_idx]
+            
+            # Calculate total price
+            flight_price = flight.get("price", 0)
+            hotel_price = hotel.get("price_per_night", 0) * 3  # Assume 3 nights
+            total_price = flight_price + hotel_price
+            
+            # Create package
+            package = {
+                "name": f"{flight.get('airline', 'Flight')} + {hotel.get('name', 'Hotel')}",
+                "flight": flight,
+                "hotel": hotel,
+                "total_price": total_price,
+                "currency": flight.get("currency", "SAR")
+            }
+            
+            packages.append(package)
+        
+        return packages
 
 # Create LangGraph node function
 def create_trip_planning_node():
@@ -536,5 +501,23 @@ def create_trip_planning_node():
     Returns:
         Callable: Node function for LangGraph
     """
-    agent = TripPlanningAgent()
-    return create_agent_node("trip_planning_agent", agent.process_request)
+    trip_planning_agent = TripPlanningAgent()
+    
+    def trip_planning_node(state: Dict[str, Any]) -> Dict[str, Any]:
+        """Trip planning node function for LangGraph"""
+        session_id = state.get("session_id", "")
+        message = state.get("user_message", "")
+        language = state.get("language", "english")
+        
+        # Process the message with the trip planning agent
+        response = trip_planning_agent.process_request(session_id, message, language)
+        
+        # Update the state with the response
+        state["response"] = response.get("text", "")
+        state["intent"] = response.get("intent", "")
+        state["mock_data"] = response.get("mock_data", {})
+        state["success"] = response.get("success", False)
+        
+        return state
+    
+    return trip_planning_node

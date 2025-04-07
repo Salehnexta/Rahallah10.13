@@ -49,7 +49,9 @@ class AgentSystem:
                     "hotel_options": [],
                     "language": language,
                     "mock_data": {},
-                    "user_preferences": {}
+                    "user_preferences": {},
+                    "current_context": None,  # Track the current conversation context
+                    "last_intent": None  # Track the last detected intent
                 }
             
             # Update session language if provided
@@ -66,7 +68,15 @@ class AgentSystem:
             
             # Determine intent using Conversation Lead Agent
             lead_response = self.conversation_lead.process_message(session_id, message, language)
-            intent = lead_response["intent"]
+            raw_intent = lead_response["intent"]
+            
+            # Get previous intent for context awareness
+            last_intent = self.sessions[session_id].get("last_intent")
+            
+            # Apply intent continuity logic for follow-up questions
+            intent = self._resolve_intent_with_context(session_id, raw_intent, message, last_intent)
+            
+            logger.info(f"Session {session_id}: Raw intent: {raw_intent}, Resolved intent: {intent}")
             
             # Process based on intent
             if intent == "flight_booking":
@@ -83,6 +93,9 @@ class AgentSystem:
                     "success": True,
                     "mock_data": {}
                 }
+            
+            # Update last intent
+            self.sessions[session_id]["last_intent"] = intent
             
             # Add assistant response to conversation history
             self.sessions[session_id]["conversation_history"].append({
@@ -178,7 +191,7 @@ class AgentSystem:
         Args:
             session_id (str): Session identifier
             message (str): User message
-            language (str): Language of the conversation
+            language (str): Language (english or arabic)
             
         Returns:
             dict: Response with trip plan
@@ -191,16 +204,72 @@ class AgentSystem:
                 language=language
             )
             
-            return response
+            # Ensure the response has the correct format
+            return {
+                "text": response.get("text", ""),
+                "intent": "trip_planning",
+                "success": response.get("success", True),
+                "mock_data": response.get("mock_data", {})
+            }
             
         except Exception as e:
             logger.error(f"Error handling trip planning: {str(e)}")
             return {
                 "text": "I'm sorry, I encountered an error processing your trip planning request.",
-                "intent": "error",
+                "intent": "trip_planning",
                 "success": False,
                 "mock_data": {}
             }
+            
+    def _resolve_intent_with_context(self, session_id, raw_intent, message, last_intent):
+        """
+        Resolve the final intent by considering conversation context and continuity
+        
+        Args:
+            session_id (str): Session identifier
+            raw_intent (str): Raw intent detected from the message
+            message (str): Current user message
+            last_intent (str): Previous intent in the conversation
+            
+        Returns:
+            str: Resolved intent considering context
+        """
+        # Extract conversation history for context
+        history = self.sessions[session_id]["conversation_history"]
+        
+        # If message is explicitly about a new topic, use the new raw intent
+        topic_change_indicators = [
+            "now I need", "let's talk about", "I want to", "can you help me with", 
+            "what about", "I'd like to", "switch to", "instead", "also"
+        ]
+        
+        # Process specific intent transitions
+        is_topic_change = any(indicator in message.lower() for indicator in topic_change_indicators)
+        
+        # Handle specific intent markers
+        if "hotel" in message.lower() and (is_topic_change or not last_intent):
+            logger.info(f"Session {session_id}: Detected hotel mention with topic change indicator")
+            return "hotel_booking"
+            
+        elif "flight" in message.lower() and (is_topic_change or not last_intent):
+            logger.info(f"Session {session_id}: Detected flight mention with topic change indicator")
+            return "flight_booking"
+            
+        elif any(word in message.lower() for word in ["itinerary", "plan", "things to do"]) and (is_topic_change or not last_intent):
+            logger.info(f"Session {session_id}: Detected trip planning mention with topic change indicator")
+            return "trip_planning"
+        
+        # For follow-up questions, maintain context unless explicit intent is detected
+        if raw_intent == "general_conversation" and last_intent and len(message.split()) < 10:
+            logger.info(f"Session {session_id}: Short follow-up detected, maintaining {last_intent} context")
+            return last_intent
+            
+        # If raw intent is a specific booking intent, prioritize it
+        if raw_intent in ["flight_booking", "hotel_booking", "trip_planning"]:
+            return raw_intent
+            
+        # If we get here, use the raw intent
+        return raw_intent
     
     def reset_session(self, session_id):
         """

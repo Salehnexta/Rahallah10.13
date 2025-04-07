@@ -89,49 +89,91 @@ class ConversationLeadAgent:
         message_lower = message.lower()
         
         # Keywords for flight booking intent
-        flight_keywords_en = ['flight', 'fly', 'plane', 'airport', 'airline']
-        flight_keywords_ar = ['طيران', 'رحلة', 'مطار', 'طائرة']
+        flight_keywords_en = ['flight', 'fly', 'plane', 'airport', 'airline', 'airways', 'booking', 'ticket']
+        flight_keywords_ar = ['طيران', 'رحلة', 'مطار', 'طائرة', 'تذكرة', 'حجز']
         
         # Keywords for hotel booking intent
-        hotel_keywords_en = ['hotel', 'stay', 'room', 'accommodation', 'lodge']
-        hotel_keywords_ar = ['فندق', 'إقامة', 'غرفة', 'سكن']
+        hotel_keywords_en = ['hotel', 'stay', 'room', 'accommodation', 'lodge', 'resort', 'booking', 'night', 'motel']
+        hotel_keywords_ar = ['فندق', 'إقامة', 'غرفة', 'سكن', 'منتجع', 'حجز']
         
         # Keywords for trip planning intent
-        trip_keywords_en = ['trip', 'plan', 'vacation', 'holiday', 'itinerary', 'package', 'complete']
-        trip_keywords_ar = ['رحلة', 'خطة', 'إجازة', 'عطلة', 'حزمة', 'سفر', 'كاملة']
+        trip_keywords_en = ['trip', 'plan', 'vacation', 'holiday', 'itinerary', 'package', 'complete', 'tour', 'visit', 'activity', 'attractions']
+        trip_keywords_ar = ['رحلة', 'خطة', 'إجازة', 'عطلة', 'حزمة', 'سفر', 'كاملة', 'زيارة']
         
         # Select keywords based on language
         flight_keywords = flight_keywords_ar if language.lower() == 'arabic' else flight_keywords_en
         hotel_keywords = hotel_keywords_ar if language.lower() == 'arabic' else hotel_keywords_en
         trip_keywords = trip_keywords_ar if language.lower() == 'arabic' else trip_keywords_en
         
-        # Check for specific flight booking patterns
-        flight_patterns_en = ['book flight', 'flight from', 'fly from', 'search flight']
-        flight_patterns_ar = ['حجز رحلة', 'رحلة من', 'طيران من']
+        # Topic change phrases
+        topic_change_en = ['now', 'next', 'also', 'need', 'want', 'looking for', 'help me with', 'can you', 'instead']
+        topic_change_ar = ['الآن', 'أيضا', 'أحتاج', 'أريد', 'ابحث عن', 'ساعدني', 'هل يمكنك', 'بدلا من ذلك']
+        topic_change = topic_change_ar if language.lower() == 'arabic' else topic_change_en
+        
+        # Strong indicators (patterns that almost definitely indicate an intent)
+        # Flight booking strong indicators
+        flight_patterns_en = ['book flight', 'flight from', 'fly from', 'search flight', 'airline ticket', 'flight ticket', 'flight to', 'flight reservation']
+        flight_patterns_ar = ['حجز رحلة', 'رحلة من', 'طيران من', 'طيران إلى', 'تذكرة طيران']
         flight_patterns = flight_patterns_ar if language.lower() == 'arabic' else flight_patterns_en
         
-        # Check for specific phrases that strongly indicate flight booking
+        # Hotel booking strong indicators
+        hotel_patterns_en = ['book hotel', 'hotel reservation', 'hotel room', 'find hotel', 'hotel in', 'place to stay', '5-star hotel', 'luxury hotel']
+        hotel_patterns_ar = ['حجز فندق', 'غرفة فندق', 'فندق في', 'مكان للإقامة', 'فندق فاخر']
+        hotel_patterns = hotel_patterns_ar if language.lower() == 'arabic' else hotel_patterns_en
+        
+        # Trip planning strong indicators
+        trip_patterns_en = ['plan my trip', 'trip itinerary', 'tourist attractions', 'places to visit', 'things to do', 'day itinerary', 'travel plan']
+        trip_patterns_ar = ['خطة رحلة', 'معالم سياحية', 'أماكن للزيارة', 'أشياء للقيام بها', 'خطة سفر']
+        trip_patterns = trip_patterns_ar if language.lower() == 'arabic' else trip_patterns_en
+        
+        # Check for strong indicators first
         for pattern in flight_patterns:
             if pattern in message_lower:
                 return 'flight_booking'
+                
+        for pattern in hotel_patterns:
+            if pattern in message_lower:
+                return 'hotel_booking'
+                
+        for pattern in trip_patterns:
+            if pattern in message_lower:
+                return 'trip_planning'
         
-        # Continue with the broader checks
+        # Continue with the broader checks and intent recognition logic
         has_flight = any(keyword in message_lower for keyword in flight_keywords)
         has_hotel = any(keyword in message_lower for keyword in hotel_keywords)
         has_trip = any(keyword in message_lower for keyword in trip_keywords)
         
-        # If message specifically mentions 'complete trip' or contains both flight and hotel keywords,
-        # it's a trip planning intent - but only if doesn't contain specific flight booking patterns
-        if ('complete trip' in message_lower or 'plan a trip' in message_lower) and not has_flight:
+        # Handle references to "take the X flight" or "I'll take the Emirates flight"
+        if re.search(r"(take|book|choose)\s+the\s+([\w\s]+)\s+(flight|airline)", message_lower) and "hotel" in message_lower:
+            # This is a transition from flight to hotel
+            logger.info(f"Detected transition from flight to hotel booking")
+            return 'hotel_booking'
+        
+        # Check for context transitions (e.g., "I'll take that flight. Now I need a hotel")
+        if has_hotel and any(phrase in message_lower for phrase in topic_change):
+            logger.info(f"Detected likely hotel booking intent with context transition")
+            return 'hotel_booking'
+            
+        if has_flight and any(phrase in message_lower for phrase in topic_change):
+            logger.info(f"Detected likely flight booking intent with context transition")
+            return 'flight_booking'
+            
+        if has_trip and any(phrase in message_lower for phrase in topic_change):
+            logger.info(f"Detected likely trip planning intent with context transition")
+            return 'trip_planning'
+        
+        # Additional complex conditions
+        if ('complete trip' in message_lower or 'plan a trip' in message_lower):
             return 'trip_planning'
         elif has_trip and has_flight and has_hotel:
             return 'trip_planning'
-        # Check for flight booking intent (higher priority than trip)
+        # Check for hotel booking intent (higher priority in cases where user is confirming flight and moving to hotel)
+        elif has_hotel or 'stay' in message_lower or 'room' in message_lower or 'star' in message_lower:
+            return 'hotel_booking'
+        # Check for flight booking intent 
         elif has_flight:
             return 'flight_booking'
-        # Check for hotel booking intent
-        elif has_hotel:
-            return 'hotel_booking'
         # Check for trip planning intent as a fallback
         elif has_trip:
             return 'trip_planning'

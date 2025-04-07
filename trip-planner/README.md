@@ -1,4 +1,4 @@
-# Saudi Trip Planning Assistant
+# Saudi Trip Planning Assistant (v1.0.6)
 
 A conversational travel planning assistant focused on the Saudi market, supporting both English and Arabic languages.
 
@@ -7,8 +7,10 @@ A conversational travel planning assistant focused on the Saudi market, supporti
 - **Flight Booking**: Search and book flights with mock data
 - **Hotel Booking**: Find and book hotels with mock data
 - **Trip Planning**: Complete travel packages combining flights and hotels
+- **Itinerary Generation**: Day-by-day activity planning for Saudi destinations
 - **Bilingual Support**: Full functionality in both English and Arabic
 - **Conversational Interface**: Natural chat experience similar to ChatGPT
+- **Multi-turn Conversations**: Maintains context across conversation turns
 
 ## Technology Stack
 
@@ -49,3 +51,15 @@ trip-planner/
 ## API Documentation
 
 See the `/docs` directory for detailed API documentation.
+
+## Changelog
+
+### Version 1.0.6 (April 2025)
+
+- **Enhanced Itinerary Generation**: Added detailed day-by-day activity planning for Saudi destinations
+- **Improved Context Handling**: Better maintenance of conversation context across multiple turns
+- **Enhanced Intent Detection**: More accurate detection of user intents for smoother conversations
+- **DeepSeek API Integration**: Updated to use the latest DeepSeek API for improved responses
+- **Dependency Updates**: Upgraded to OpenAI SDK >=1.12.0 and latest LangChain/LangGraph packages
+- **Bug Fixes**: Resolved issues with intent transitions in multi-turn conversations
+- **End-to-End Testing**: Added comprehensive tests for conversations and language switching
