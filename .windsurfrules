@@ -1,0 +1,45 @@
+Windsurf General Rules and Guidelines
+Project Setup
+
+Provide clear, detailed instructions in the todo.md file - Windsurf will follow them directly
+Link to external documentation for specialized tools like LangChain or Chroma DB
+Structure the project logically with clear folder organization from the start
+
+Code Generation
+
+Ask Windsurf to generate one component or feature at a time
+Specify dependencies and versions explicitly to avoid compatibility issues
+Provide system prompts for LLM agents exactly as you want them implemented
+Request detailed comments for complex logic
+
+Testing
+
+Ask Windsurf to write tests alongside implementation code
+Request test cases for specific user flows (e.g., Arabic user booking a flight)
+Have Windsurf implement error handling from the beginning
+
+Frontend
+
+Provide clear UI mockups or detailed descriptions of the desired interface
+Specify responsive design requirements explicitly
+Request accessibility features if needed
+
+Integration
+
+Ask Windsurf to implement one integration point at a time
+For complex integrations like DeepSeek, provide links to documentation
+Request logging and troubleshooting code to help debug integration issues
+
+Best Practices
+
+Remind Windsurf to use environment variables for sensitive information
+Request input validation and security measures
+Ask for documentation of API endpoints
+
+Review Process
+
+Review code in logical chunks rather than all at once
+Provide specific feedback on what to change rather than general comments
+Request explanations for complex implementations to ensure understanding
+
+Remember that Windsurf works best when given clear, specific instructions and can implement your Trip Planning Assistant most effectively when you provide detailed requirements upfront.
