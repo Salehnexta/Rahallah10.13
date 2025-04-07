@@ -16,6 +16,10 @@ class ConversationLeadAgent:
     def __init__(self):
         """Initialize the Conversation Lead Agent"""
         logger.info("Conversation Lead Agent initialized")
+    
+    def process_message(self, session_id, message, language):
+        """Alias for process_request to maintain compatibility with tests"""
+        return self.process_request(session_id, message, language)
         
     def process_request(self, session_id, message, language):
         """
@@ -93,26 +97,44 @@ class ConversationLeadAgent:
         hotel_keywords_ar = ['فندق', 'إقامة', 'غرفة', 'سكن']
         
         # Keywords for trip planning intent
-        trip_keywords_en = ['trip', 'plan', 'vacation', 'holiday', 'itinerary', 'package']
-        trip_keywords_ar = ['رحلة', 'خطة', 'إجازة', 'عطلة', 'حزمة', 'سفر']
+        trip_keywords_en = ['trip', 'plan', 'vacation', 'holiday', 'itinerary', 'package', 'complete']
+        trip_keywords_ar = ['رحلة', 'خطة', 'إجازة', 'عطلة', 'حزمة', 'سفر', 'كاملة']
         
         # Select keywords based on language
         flight_keywords = flight_keywords_ar if language.lower() == 'arabic' else flight_keywords_en
         hotel_keywords = hotel_keywords_ar if language.lower() == 'arabic' else hotel_keywords_en
         trip_keywords = trip_keywords_ar if language.lower() == 'arabic' else trip_keywords_en
         
-        # Check for flight booking intent
-        if any(keyword in message_lower for keyword in flight_keywords):
-            return 'flight_booking'
+        # Check for specific flight booking patterns
+        flight_patterns_en = ['book flight', 'flight from', 'fly from', 'search flight']
+        flight_patterns_ar = ['حجز رحلة', 'رحلة من', 'طيران من']
+        flight_patterns = flight_patterns_ar if language.lower() == 'arabic' else flight_patterns_en
         
-        # Check for hotel booking intent
-        elif any(keyword in message_lower for keyword in hotel_keywords):
-            return 'hotel_booking'
+        # Check for specific phrases that strongly indicate flight booking
+        for pattern in flight_patterns:
+            if pattern in message_lower:
+                return 'flight_booking'
         
-        # Check for trip planning intent
-        elif any(keyword in message_lower for keyword in trip_keywords):
+        # Continue with the broader checks
+        has_flight = any(keyword in message_lower for keyword in flight_keywords)
+        has_hotel = any(keyword in message_lower for keyword in hotel_keywords)
+        has_trip = any(keyword in message_lower for keyword in trip_keywords)
+        
+        # If message specifically mentions 'complete trip' or contains both flight and hotel keywords,
+        # it's a trip planning intent - but only if doesn't contain specific flight booking patterns
+        if ('complete trip' in message_lower or 'plan a trip' in message_lower) and not has_flight:
             return 'trip_planning'
-        
+        elif has_trip and has_flight and has_hotel:
+            return 'trip_planning'
+        # Check for flight booking intent (higher priority than trip)
+        elif has_flight:
+            return 'flight_booking'
+        # Check for hotel booking intent
+        elif has_hotel:
+            return 'hotel_booking'
+        # Check for trip planning intent as a fallback
+        elif has_trip:
+            return 'trip_planning'
         # Default to general conversation
         else:
             return 'general_conversation'

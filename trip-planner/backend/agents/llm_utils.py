@@ -6,7 +6,7 @@ Uses LangGraph for agent orchestration
 import os
 import json
 import logging
-import openai
+from openai import OpenAI
 from dotenv import load_dotenv
 from typing import Dict, List, Any, Optional, Callable
 import langgraph.graph as lg
@@ -36,10 +36,12 @@ def init_openai_client():
         OpenAI: Configured OpenAI client for DeepSeek
     """
     try:
-        # Configure OpenAI settings
-        openai.api_key = os.getenv("DEEPSEEK_API_KEY")
-        openai.api_base = "https://api.deepseek.com"
-        return openai
+        # Configure OpenAI client with DeepSeek settings
+        client = OpenAI(
+            api_key=DEEPSEEK_API_KEY,
+            base_url=DEEPSEEK_API_BASE
+        )
+        return client
     except Exception as e:
         logger.error(f"Error initializing OpenAI client: {str(e)}")
         raise
@@ -77,7 +79,7 @@ def generate_response(system_prompt, user_message, conversation_history=None, te
         messages.append({"role": "user", "content": user_message})
         
         # Generate response using OpenAI API
-        response = client.ChatCompletion.create(
+        response = client.chat.completions.create(
             model=model,
             messages=messages,
             temperature=temperature
@@ -137,60 +139,100 @@ def generate_flight_options(origin, destination, departure_date, return_date=Non
         dict: Mock flight options with detailed information
     """
     try:
-        # Generate Saudi airline names
-        saudi_airlines = ["Saudia", "flynas", "flyadeal", "Nesma Airlines", "SaudiGulf Airlines"]
+        # Set default values for missing parameters
+        origin = origin or "Riyadh"
+        destination = destination or "Jeddah"
+        departure_date = departure_date or "2025-05-01"  # Default to next month
         
-        # Generate mock flights
-        flights = []
-        for i in range(num_options):
-            # Create a flight option with randomized details
-            flight = {
-                "airline": saudi_airlines[i % len(saudi_airlines)],
-                "flight_number": f"SV{1000 + i*111}",
-                "origin": origin,
-                "destination": destination,
-                "departure_date": departure_date,
-                "departure_time": f"{(6 + i*2) % 24:02d}:00",
-                "arrival_time": f"{(9 + i*2) % 24:02d}:30",
-                "duration": f"{3 + i}h 30m",
-                "price": 800 + i * 200,
-                "currency": "SAR",
-                "class": "Economy",
-                "available_seats": 10 + i*5,
-                "booking_link": f"https://example.com/flights/{1000 + i}"
-            }
+        # Create a system prompt to generate realistic flight data
+        system_prompt = f"""You are a flight booking API for Saudi Arabia. Generate {num_options} realistic flight options between {origin} and {destination} for {departure_date}.
+        
+        Return ONLY a valid JSON object with the following structure:
+        {{"flights": [
+            {{"airline": "Saudia", "flight_number": "SV1234", "origin": "{origin}", "destination": "{destination}", 
+             "departure_date": "{departure_date}", "departure_time": "08:30", "arrival_time": "10:15", 
+             "duration": "1h 45m", "price": 750, "currency": "SAR", "class": "Economy", 
+             "amenities": ["Wi-Fi", "In-flight entertainment"], "available_seats": 45}}]
+        }}
+        
+        Make sure each flight has a different airline from ["Saudia", "flynas", "flyadeal", "Nesma Airlines", "SaudiGulf Airlines"],
+        realistic flight numbers, departure/arrival times, durations, and prices between 500-2000 SAR.
+        """
+        
+        # Generate response from DeepSeek
+        user_message = f"Generate flight options from {origin} to {destination} on {departure_date}" + \
+                     (f" with return on {return_date}" if return_date else "")
+        
+        # Call the DeepSeek API to generate flight data
+        client = init_openai_client()
+        response = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_message}
+            ],
+            temperature=0.5
+        )
+        
+        response_text = response.choices[0].message.content
+        
+        # Extract JSON from response
+        json_start = response_text.find('{')
+        json_end = response_text.rfind('}') + 1
+        if json_start >= 0 and json_end > json_start:
+            json_str = response_text[json_start:json_end]
+            flight_data = json.loads(json_str)
             
-            flights.append(flight)
-        
-        # If it's a round trip, add return flights
-        return_flights = []
-        if return_date:
-            for i in range(num_options):
-                # Create a return flight option
-                return_flight = {
-                    "airline": saudi_airlines[(i+2) % len(saudi_airlines)],
-                    "flight_number": f"SV{2000 + i*111}",
-                    "origin": destination,
-                    "destination": origin,
-                    "departure_date": return_date,
-                    "departure_time": f"{(16 + i*2) % 24:02d}:00",
-                    "arrival_time": f"{(19 + i*2) % 24:02d}:30",
-                    "duration": f"{3 + i}h 30m",
-                    "price": 850 + i * 200,
-                    "currency": "SAR",
-                    "class": "Economy",
-                    "available_seats": 15 + i*5,
-                    "booking_link": f"https://example.com/flights/{2000 + i}"
-                }
+            # Create empty return flights list by default
+            return_flights = []
+            
+            # If it's a round trip, generate return flights
+            if return_date:
+                # Create return flight system prompt
+                return_system_prompt = f"""You are a flight booking API for Saudi Arabia. Generate {num_options} realistic return flight options 
+                from {destination} back to {origin} for {return_date}.
                 
-                return_flights.append(return_flight)
+                Return ONLY a valid JSON object with the following structure:
+                {{"return_flights": [
+                    {{"airline": "Saudia", "flight_number": "SV1234", "origin": "{destination}", "destination": "{origin}", 
+                     "departure_date": "{return_date}", "departure_time": "19:30", "arrival_time": "21:15", 
+                     "duration": "1h 45m", "price": 750, "currency": "SAR", "class": "Economy", 
+                     "amenities": ["Wi-Fi", "In-flight entertainment"], "available_seats": 45}}]
+                }}
+                
+                Make sure each flight has a different airline from ["Saudia", "flynas", "flyadeal", "Nesma Airlines", "SaudiGulf Airlines"],
+                realistic flight numbers, departure/arrival times, durations, and prices between 500-2000 SAR.
+                """
+                
+                # Generate return flights
+                return_response = client.chat.completions.create(
+                    model="deepseek-chat",
+                    messages=[
+                        {"role": "system", "content": return_system_prompt},
+                        {"role": "user", "content": f"Generate return flight options from {destination} to {origin} on {return_date}"}
+                    ],
+                    temperature=0.5
+                )
+                
+                return_text = return_response.choices[0].message.content
+                
+                # Extract JSON from return response
+                json_start = return_text.find('{')
+                json_end = return_text.rfind('}') + 1
+                if json_start >= 0 and json_end > json_start:
+                    json_str = return_text[json_start:json_end]
+                    return_data = json.loads(json_str)
+                    return_flights = return_data.get("return_flights", [])
+            
+            # Combine and return all flight data
+            return {
+                "flights": flight_data.get("flights", []),
+                "return_flights": return_flights,
+                "is_round_trip": bool(return_date)
+            }
         
-        # Return mock data
-        return {
-            "flights": flights,
-            "return_flights": return_flights if return_date else [],
-            "is_round_trip": bool(return_date)
-        }
+        # Fallback to empty response if JSON parsing fails
+        return {"flights": [], "return_flights": [], "is_round_trip": bool(return_date)}
         
     except Exception as e:
         logger.error(f"Error generating flight options: {str(e)}")
@@ -198,7 +240,7 @@ def generate_flight_options(origin, destination, departure_date, return_date=Non
 
 def generate_hotel_options(destination, check_in, check_out, num_options=3):
     """
-    Generate mock hotel options
+    Generate mock hotel options using DeepSeek
     
     Args:
         destination (str): City name
@@ -210,34 +252,54 @@ def generate_hotel_options(destination, check_in, check_out, num_options=3):
         dict: Mock hotel options with detailed information
     """
     try:
-        # Generate hotel names
-        hotel_names = ["Hotel 1", "Hotel 2", "Hotel 3", "Hotel 4", "Hotel 5"]
+        # Set default values for missing parameters
+        destination = destination or "Riyadh"
+        check_in = check_in or "2025-05-01"  # Default to next month
+        check_out = check_out or "2025-05-05"  # Default to 4-day stay
         
-        # Generate mock hotels
-        hotels = []
-        for i in range(num_options):
-            # Create a hotel option with randomized details
-            hotel = {
-                "name": hotel_names[i % len(hotel_names)],
-                "stars": 3 + i % 2,
-                "location": f"{destination} city center",
-                "price_per_night": 500 + i * 100,
-                "currency": "SAR",
-                "amenities": ["Wi-Fi", "pool", "gym"],
-                "booking_link": f"https://example.com/hotels/{1000 + i}",
-                "room_types": {
-                    "standard": 10 + i*5,
-                    "deluxe": 5 + i*2,
-                    "suite": 2 + i
-                }
-            }
-            
-            hotels.append(hotel)
+        # Create a system prompt to generate realistic hotel data
+        system_prompt = f"""You are a hotel booking API for Saudi Arabia. Generate {num_options} realistic hotel options in {destination} for a stay from {check_in} to {check_out}.
         
-        # Return mock data
-        return {
-            "hotels": hotels
-        }
+        Return ONLY a valid JSON object with the following structure:
+        {{"hotels": [
+            {{"name": "Four Seasons Hotel Riyadh", "stars": 5, "location": "{destination} city center", 
+             "price_per_night": 1500, "total_price": 6000, "currency": "SAR", 
+             "amenities": ["Wi-Fi", "pool", "gym", "spa", "restaurant"], 
+             "distance_from_center": "1.5 km", "rating": 4.8, "reviews": 450,
+             "room_types": {{"standard": 15, "deluxe": 8, "suite": 3}}}}
+        ]}}
+        
+        Make sure each hotel has a realistic Saudi hotel name (include some international chains like Hilton, Marriott, and local Saudi hotel chains),
+        accurate star ratings (3-5 stars), realistic prices for the star level (3-star: 300-700 SAR, 4-star: 600-1200 SAR, 5-star: 1000-3000 SAR per night),
+        and calculate the total_price based on the number of nights between {check_in} and {check_out}.
+        """
+        
+        # Generate response from DeepSeek
+        user_message = f"Generate hotel options in {destination} from {check_in} to {check_out}"
+        
+        # Call the DeepSeek API to generate hotel data
+        client = init_openai_client()
+        response = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_message}
+            ],
+            temperature=0.5
+        )
+        
+        response_text = response.choices[0].message.content
+        
+        # Extract JSON from response
+        json_start = response_text.find('{')
+        json_end = response_text.rfind('}') + 1
+        if json_start >= 0 and json_end > json_start:
+            json_str = response_text[json_start:json_end]
+            hotel_data = json.loads(json_str)
+            return hotel_data
+        
+        # Fallback to empty response if JSON parsing fails
+        return {"hotels": []}
         
     except Exception as e:
         logger.error(f"Error generating hotel options: {str(e)}")
@@ -254,19 +316,25 @@ def test_llm_connection():
         # Initialize client
         client = init_openai_client()
         
-        # Test with a simple request
-        response = client.ChatCompletion.create(
+        # Test with a simple request - use the updated SDK format
+        response = client.chat.completions.create(
             model="deepseek-chat",
-            messages=[{"role": "user", "content": "Say hello"}],
-            temperature=0.7
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": "Say hello"}
+            ]
         )
         
-        if response and response.choices:
-            logger.info("Successfully connected to DeepSeek API")
+        # Check for a successful response
+        if response and response.choices and len(response.choices) > 0:
+            logger.info("LLM connection test successful")
             return True
-        return False
+        else:
+            logger.error("LLM connection test failed: No valid response received")
+            return False
+            
     except Exception as e:
-        logger.error(f"Error connecting to DeepSeek: {str(e)}")
+        logger.error(f"LLM connection test failed: {str(e)}")
         return False
 
 

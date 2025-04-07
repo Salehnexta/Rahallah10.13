@@ -10,24 +10,28 @@ import sys
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Import all necessary modules and classes for both LangGraph and direct agent testing
 try:
     # Test if LangGraph is available
     import langgraph
-    from agents.conversation_lead_agent import create_conversation_lead_node
-    from agents.flight_booking_agent import create_flight_booking_node
-    from agents.hotel_booking_agent import create_hotel_booking_node
-    from agents.trip_planning_agent import create_trip_planning_node
-    from agents.llm_utils import create_agent_workflow
     LANGGRAPH_AVAILABLE = True
     logger.info("LangGraph is available, will test with LangGraph workflow.")
 except ImportError as e:
     logger.warning(f"LangGraph not available: {e}. Will test agents directly without LangGraph.")
-    # Import the agent classes directly if LangGraph modules aren't available
-    from agents.conversation_lead_agent import ConversationLeadAgent
-    from agents.flight_booking_agent import FlightBookingAgent
-    from agents.hotel_booking_agent import HotelBookingAgent
-    from agents.trip_planning_agent import TripPlanningAgent
     LANGGRAPH_AVAILABLE = False
+
+# Import node functions for LangGraph testing
+from agents.conversation_lead_agent import create_conversation_lead_node
+from agents.flight_booking_agent import create_flight_booking_node
+from agents.hotel_booking_agent import create_hotel_booking_node
+from agents.trip_planning_agent import create_trip_planning_node
+from agents.llm_utils import create_agent_workflow
+
+# Import agent classes for direct testing
+from agents.conversation_lead_agent import ConversationLeadAgent
+from agents.flight_booking_agent import FlightBookingAgent
+from agents.hotel_booking_agent import HotelBookingAgent
+from agents.trip_planning_agent import TripPlanningAgent
 
 def test_langgraph_workflow():
     """Test the LangGraph-based multi-agent workflow"""

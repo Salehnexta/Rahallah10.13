@@ -10,7 +10,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 from agents.agent_system import AgentSystem
 from agents.llm_utils import generate_response
-from langchain.output_parsers import ResponseSchema, StructuredOutputParser
+from langchain.output_parsers.structured import ResponseSchema, StructuredOutputParser
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage, SystemMessage

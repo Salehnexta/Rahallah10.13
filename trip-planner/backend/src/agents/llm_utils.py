@@ -26,93 +26,52 @@ DEEPSEEK_API_BASE = "https://api.deepseek.com"
 def get_openai_client():
     """
     Initialize and return an OpenAI client configured for DeepSeek
-    
+
     Returns:
         OpenAI: Configured OpenAI client for DeepSeek
     """
     try:
         client = OpenAI(
             api_key=DEEPSEEK_API_KEY,
-            base_url=DEEPSEEK_API_BASE
+            base_url="https://api.deepseek.com"
         )
         return client
     except Exception as e:
         logger.error(f"Error initializing OpenAI client: {str(e)}")
         raise
 
-def generate_response(system_prompt, user_message, conversation_history=None, temperature=0.7, model="deepseek-chat"):
+def generate_response(system_prompt: str, user_message: str, temperature: float = 0.7) -> dict:
     """
-    Generate a response using the DeepSeek LLM with mock data generation
-    
+    Generate a response using the DeepSeek LLM
+
     Args:
-        system_prompt (str): Instructions for the AI
-        user_message (str): Current user message
-        conversation_history (list): Previous messages in the format 
-                                    [{"role": "user/assistant", "content": "message"}]
-        temperature (float): Controls randomness in responses
-        model (str): Model identifier for DeepSeek
-        
+        system_prompt (str): System prompt to set context
+        user_message (str): User's message
+        temperature (float, optional): Temperature for response generation. Defaults to 0.7.
+
     Returns:
-        dict: Generated response with mock data
+        dict: Response containing success status and either the response text or error message
     """
     try:
         client = get_openai_client()
         
-        # Prepare messages
-        messages = [
-            {"role": "system", "content": system_prompt}
-        ]
-        
-        # Add conversation history if provided
-        if conversation_history:
-            for msg in conversation_history:
-                if msg["role"] in ["user", "assistant"]:
-                    messages.append({
-                        "role": msg["role"],
-                        "content": msg["content"]
-                    })
-        
-        # Add current user message
-        if user_message:
-            messages.append({"role": "user", "content": user_message})
-        
-        # Generate response
         response = client.chat.completions.create(
-            model=model,
-            messages=messages,
-            temperature=temperature,
-            stream=False
+            model="deepseek-chat",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_message}
+            ],
+            temperature=temperature
         )
         
-        # Parse the response
-        content = response.choices[0].message.content
-        
-        # Try to parse JSON if it's in the response
-        try:
-            # Extract JSON if it's in the response
-            json_start = content.find('{')
-            json_end = content.rfind('}') + 1
-            if json_start != -1 and json_end != -1:
-                mock_data = json.loads(content[json_start:json_end])
-                return {
-                    "text": content,
-                    "mock_data": mock_data,
-                    "success": True
-                }
-        except json.JSONDecodeError:
-            pass
-            
         return {
-            "text": content,
-            "mock_data": {},
-            "success": True
+            "success": True,
+            "response": response.choices[0].message.content
         }
         
     except Exception as e:
         logger.error(f"Error generating response: {str(e)}")
         return {
-            "text": f"I'm sorry, I encountered an error: {str(e)}",
-            "mock_data": {},
             "success": False,
             "error": str(e)
         }

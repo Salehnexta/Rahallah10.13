@@ -65,7 +65,7 @@ class AgentSystem:
             })
             
             # Determine intent using Conversation Lead Agent
-            lead_response = self.conversation_lead.process_message(message, language)
+            lead_response = self.conversation_lead.process_message(session_id, message, language)
             intent = lead_response["intent"]
             
             # Process based on intent
