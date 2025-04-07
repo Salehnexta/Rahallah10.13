@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { ChatResponse } from '../types';
 
-// API base URL - change this to match your backend server
-const API_BASE_URL = 'http://localhost:5000/api';
+// API base URL from environment variables
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5003/api';
 
 // Create axios instance with base URL
 const api = axios.create({
@@ -10,7 +10,27 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
+  timeout: 10000, // 10 second timeout
 });
+
+// Add response interceptor for global error handling
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    // Add centralized error handling
+    if (error.response) {
+      // Server responded with an error status
+      console.error(`API Error ${error.response.status}:`, error.response.data);
+    } else if (error.request) {
+      // Request was made but no response
+      console.error('API Error: No response received', error.request);
+    } else {
+      // Error in setting up the request
+      console.error('API Error:', error.message);
+    }
+    return Promise.reject(error);
+  }
+);
 
 /**
  * Send a chat message to the backend
@@ -20,12 +40,14 @@ const api = axios.create({
  */
 export const sendChatMessage = async (
   message: string,
-  sessionId?: string
+  sessionId?: string,
+  language: 'en' | 'ar' = 'en'
 ): Promise<ChatResponse> => {
   try {
     const response = await api.post('/chat', {
       message,
       session_id: sessionId,
+      language,
     });
     return response.data;
   } catch (error) {

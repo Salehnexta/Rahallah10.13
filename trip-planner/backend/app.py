@@ -158,5 +158,5 @@ if __name__ == '__main__':
         logger.warning("DEEPSEEK_API_KEY not found in environment variables")
         print("Warning: DEEPSEEK_API_KEY not set in .env file")
     
-    # Run the Flask app
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # Run the Flask app on port 5111 which should be available
+    app.run(host='0.0.0.0', port=5111, debug=True)

@@ -1,0 +1,136 @@
+/* Itinerary Display Styles */
+.itinerary-container {
+  background-color: var(--background-color-secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.itinerary-container.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.itinerary-day {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+}
+
+.itinerary-day:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.day-title {
+  color: var(--text-color-primary);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.day-title::before {
+  content: '🗓️';
+  margin-right: 0.5rem;
+}
+
+.rtl .day-title::before {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+.day-activities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.activity {
+  display: flex;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background-color: var(--background-color);
+  transition: transform 0.2s ease;
+}
+
+.activity:hover {
+  transform: translateY(-2px);
+}
+
+.activity.morning {
+  border-left: 4px solid #ffa726; /* Orange */
+}
+
+.activity.afternoon {
+  border-left: 4px solid #42a5f5; /* Blue */
+}
+
+.activity.evening {
+  border-left: 4px solid #5c6bc0; /* Indigo */
+}
+
+.rtl .activity.morning,
+.rtl .activity.afternoon,
+.rtl .activity.evening {
+  border-left: none;
+  border-right: 4px solid #ffa726; /* Orange */
+}
+
+.rtl .activity.afternoon {
+  border-right-color: #42a5f5; /* Blue */
+}
+
+.rtl .activity.evening {
+  border-right-color: #5c6bc0; /* Indigo */
+}
+
+.activity-icon {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.rtl .activity-icon {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-content h4 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color-primary);
+}
+
+.activity-content p {
+  margin: 0;
+  color: var(--text-color-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .itinerary-container {
+    padding: 1rem;
+  }
+  
+  .day-title {
+    font-size: 1.1rem;
+  }
+  
+  .activity {
+    padding: 0.5rem;
+  }
+  
+  .activity-icon {
+    font-size: 1.25rem;
+  }
+}

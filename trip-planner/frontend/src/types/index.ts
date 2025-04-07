@@ -4,6 +4,8 @@ export interface Message {
   role: 'user' | 'assistant';
   content: string;
   timestamp: Date;
+  intent?: string;
+  isError?: boolean;
 }
 
 // Chat session type
@@ -18,7 +20,9 @@ export interface ChatResponse {
   session_id: string;
   response: string;
   language: 'en' | 'ar';
-  intent: 'flight' | 'hotel' | 'trip' | 'continue_conversation';
+  intent: 'flight_booking' | 'hotel_booking' | 'trip_planning' | 'general' | string;
+  error?: string;
+  success: boolean;
 }
 
 // Sample prompt type

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Message } from '../types';
+import ItineraryDisplay from './ItineraryDisplay';
+import '../styles/ItineraryDisplay.css';
 
 interface ChatMessageProps {
   message: Message;
@@ -29,7 +31,11 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message, language }) => {
         className="message-content"
         dir={textDirection}
       >
-        {message.content}
+        {isUser ? (
+          <p className="message-text">{message.content}</p>
+        ) : (
+          <ItineraryDisplay content={message.content} language={language} />
+        )}
       </div>
       {isUser && (
         <div className={`avatar ${avatarClass}`}>

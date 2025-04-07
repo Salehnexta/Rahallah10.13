@@ -5,19 +5,24 @@ import ChatMessage from './ChatMessage';
 import ChatInput from './ChatInput';
 import TypingIndicator from './TypingIndicator';
 import SamplePrompts from './SamplePrompts';
+import LoadingIndicator from './LoadingIndicator';
+import ErrorMessage from './ErrorMessage';
+import LanguageSwitcher from './LanguageSwitcher';
 import { Message, SamplePrompt } from '../types';
-import { sendChatMessage, resetChatSession } from '../utils/api';
+import { sendChatMessage, resetChatSession, checkApiHealth } from '../utils/api';
 
 /**
  * Main chat container component that manages the conversation state
  */
 const ChatContainer: React.FC = () => {
-  // State for messages, loading, theme, language
+  // State for messages, loading, theme, language, error handling
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [sessionId, setSessionId] = useState<string>('');
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [language, setLanguage] = useState<'en' | 'ar'>('en');
+  const [error, setError] = useState<string | null>(null);
+  const [isBackendAvailable, setIsBackendAvailable] = useState(true);
   
   // Reference to message container for scrolling
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -52,10 +57,30 @@ const ChatContainer: React.FC = () => {
     scrollToBottom();
   }, [messages]);
 
-  // Set theme on body element
+  // useEffect for setting up theme
   useEffect(() => {
     document.body.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
+  
+  // Check backend health on initial load
+  useEffect(() => {
+    const checkBackendHealth = async () => {
+      try {
+        await checkApiHealth();
+        setIsBackendAvailable(true);
+      } catch (error) {
+        console.error('Backend health check failed:', error);
+        setIsBackendAvailable(false);
+        setError(
+          language === 'en'
+            ? 'Unable to connect to the server. Please check your connection.'
+            : 'تعذر الاتصال بالخادم. يرجى التحقق من اتصالك.'
+        );
+      }
+    };
+    
+    checkBackendHealth();
+  }, [language]);
 
   // Set direction on body element
   useEffect(() => {
@@ -94,8 +119,11 @@ const ChatContainer: React.FC = () => {
     setIsLoading(true);
     
     try {
-      // Send message to API
-      const response = await sendChatMessage(content, sessionId);
+          // Clear any previous errors
+      setError(null);
+      
+      // Send message to API with current language setting
+      const response = await sendChatMessage(content, sessionId, language);
       
       // Save session ID if this is first message
       if (!sessionId) {
@@ -108,6 +136,7 @@ const ChatContainer: React.FC = () => {
         role: 'assistant',
         content: response.response,
         timestamp: new Date(),
+        intent: response.intent, // Store intent for special rendering if needed
       };
       
       // Add assistant message to state
@@ -117,8 +146,24 @@ const ChatContainer: React.FC = () => {
       if (response.language !== language) {
         setLanguage(response.language as 'en' | 'ar');
       }
-    } catch (error) {
+      
+      // Update backend availability status
+      setIsBackendAvailable(true);
+    } catch (error: any) {
       console.error('Error sending message:', error);
+      
+      // Set error state
+      setError(
+        error.response?.data?.error || 
+        (language === 'en'
+          ? 'Sorry, there was an error processing your request.'
+          : 'عذرًا، حدث خطأ أثناء معالجة طلبك.')
+      );
+      
+      // Mark backend as unavailable if connection error
+      if (!error.response) {
+        setIsBackendAvailable(false);
+      }
       
       // Add error message
       const errorMessage: Message = {
@@ -128,6 +173,7 @@ const ChatContainer: React.FC = () => {
           ? 'Sorry, there was an error processing your request. Please try again.'
           : 'عذرًا، حدث خطأ أثناء معالجة طلبك. يرجى المحاولة مرة أخرى.',
         timestamp: new Date(),
+        isError: true,
       };
       
       setMessages(prev => [...prev, errorMessage]);
@@ -156,41 +202,67 @@ const ChatContainer: React.FC = () => {
     }
   };
 
+  // Retry handler for error conditions
+  const handleRetry = () => {
+    setError(null);
+    // Check backend health again
+    checkApiHealth()
+      .then(() => setIsBackendAvailable(true))
+      .catch(() => setIsBackendAvailable(false));
+  };
+
   return (
     <div className="chat-container">
-      <ChatHeader 
+      <ChatHeader
         onToggleTheme={toggleTheme}
         onToggleLanguage={toggleLanguage}
         isDarkMode={isDarkMode}
         language={language}
       />
       
-      <div className="chat-messages">
-        {messages.map(message => (
-          <ChatMessage 
-            key={message.id} 
-            message={message} 
+      <div className="language-switcher-container">
+        <LanguageSwitcher 
+          language={language} 
+          onToggle={toggleLanguage} 
+        />
+      </div>
+      
+      {!isBackendAvailable && (
+        <div className="backend-error">
+          <ErrorMessage
+            message={language === 'en' ? 
+              'Server connection lost. Please check your internet connection.' : 
+              'فقد الاتصال بالخادم. يرجى التحقق من اتصال الإنترنت الخاص بك.'}
+            onRetry={handleRetry}
+            language={language}
+          />
+        </div>
+      )}
+      
+      <div className="messages-container">
+        {messages.map((message) => (
+          <ChatMessage
+            key={message.id}
+            message={message}
             language={language}
           />
         ))}
         
-        {isLoading && <TypingIndicator />}
-        
+        {isLoading && <LoadingIndicator language={language} />}
         <div ref={messagesEndRef} />
       </div>
       
-      {messages.length === 1 && (
-        <SamplePrompts 
-          prompts={samplePrompts}
-          onSelectPrompt={handleSelectPrompt}
-          language={language}
-        />
-      )}
-      
-      <ChatInput 
-        onSendMessage={handleSendMessage}
-        isLoading={isLoading}
+      <SamplePrompts
+        prompts={samplePrompts.filter(prompt => prompt.language === language)}
+        onSelectPrompt={handleSelectPrompt}
         language={language}
+      />
+      
+      <ChatInput
+        onSendMessage={handleSendMessage}
+        language={language}
+        isLoading={isLoading}
+        disabled={!isBackendAvailable}
       />
     </div>
   );

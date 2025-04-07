@@ -4,12 +4,13 @@ interface ChatInputProps {
   onSendMessage: (message: string) => void;
   isLoading: boolean;
   language: 'en' | 'ar';
+  disabled?: boolean;
 }
 
 /**
  * Component for the chat input form with send button
  */
-const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, language }) => {
+const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, language, disabled = false }) => {
   const [message, setMessage] = useState('');
   
   // Set text direction and placeholders based on language
@@ -37,12 +38,12 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, languag
           onChange={(e) => setMessage(e.target.value)}
           placeholder={placeholder}
           dir={textDirection}
-          disabled={isLoading}
+          disabled={isLoading || disabled}
         />
         <button 
           type="submit" 
           className="send-button"
-          disabled={!message.trim() || isLoading}
+          disabled={isLoading || disabled || !message.trim()}
         >
           {sendButtonText}
         </button>

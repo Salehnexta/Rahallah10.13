@@ -319,3 +319,1060 @@
 2025-04-07 14:24:52,103 - werkzeug - INFO -  * Debugger PIN: 550-417-014
 2025-04-07 14:26:09,096 - werkzeug - INFO -  * Detected change in 'D:\\Desktop\\Rahallah10.13\\trip-planner\\backend\\agents\\llm_utils.py', reloading
 2025-04-07 14:26:09,222 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:04:43,839 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:04:43,840 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:04:43,840 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:04:43,840 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:04:43,840 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:04:43,840 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:04:43,840 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:05:04,133 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:05:04,133 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:05:04,133 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:05:04,133 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:05:04,133 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:05:04,133 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:05:04,133 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:05:04,136 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-08 01:05:04,137 - werkzeug - INFO -  * Running on http://192.168.100.100:5001/ (Press CTRL+C to quit)
+2025-04-08 01:05:04,137 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:05:04,685 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:05:04,685 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:05:04,685 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:05:04,685 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:05:04,685 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:05:04,685 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:05:04,685 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:05:04,688 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:05:04,698 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:08:02,010 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/test_api.py', reloading
+2025-04-08 01:08:02,162 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:08:02,922 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:08:02,922 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:02,922 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:02,922 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:08:02,922 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:02,922 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:02,922 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:08:02,926 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:08:02,933 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:08:26,496 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/routes/api.py', reloading
+2025-04-08 01:08:26,602 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:08:27,300 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:08:27,300 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:27,300 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:27,300 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:08:27,300 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:27,300 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:27,300 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:08:27,304 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:08:27,310 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:08:57,079 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/routes/api.py', reloading
+2025-04-08 01:08:57,182 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:08:58,001 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:08:58,001 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:58,001 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:58,001 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:08:58,001 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:58,001 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:08:58,001 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:08:58,005 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:08:58,013 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:09:08,226 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/app_factory.py', reloading
+2025-04-08 01:09:08,336 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:09:09,032 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:09:09,032 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:09,032 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:09,032 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:09:09,032 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:09,032 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:09,032 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:09:09,036 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:09:09,043 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:09:16,275 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:09:20,853 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:09:20,854 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:09:20] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:09:32,502 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/test_api.py', reloading
+2025-04-08 01:09:32,613 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:09:33,376 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:09:33,376 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:33,376 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:33,376 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:09:33,376 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:33,376 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:33,376 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:09:33,380 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:09:33,393 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:09:47,751 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/test_api.py', reloading
+2025-04-08 01:09:47,873 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:09:48,742 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:09:48,742 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:48,742 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:48,742 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:09:48,742 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:48,742 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:09:48,742 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:09:48,747 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:09:48,757 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:10:04,095 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:10:07,272 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:10:07,274 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:10:07] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:10:51,124 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/agent_graph.py', reloading
+2025-04-08 01:10:51,257 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:10:52,023 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:10:52,023 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:10:52,023 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:10:52,023 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:10:52,023 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:10:52,023 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:10:52,023 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:10:52,028 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:10:52,036 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:10:58,196 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/llm_utils.py', reloading
+2025-04-08 01:10:58,382 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:10:58,962 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:10:58,962 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:10:58,962 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:10:58,962 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:10:58,962 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:10:58,962 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:10:58,962 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:10:58,965 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:10:58,971 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:11:25,759 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:11:25,759 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:25,759 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:25,759 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:11:25,759 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:25,759 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:25,759 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:11:37,931 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/wsgi.py', reloading
+2025-04-08 01:11:38,029 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:11:38,785 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:11:38,786 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:38,786 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:38,786 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:11:38,786 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:38,786 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:38,786 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:11:38,790 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:11:38,801 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:11:44,928 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/test_api.py', reloading
+2025-04-08 01:11:45,057 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:11:45,728 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:11:45,728 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:45,728 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:45,728 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:11:45,728 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:45,728 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:45,728 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:11:45,732 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:11:45,739 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:11:53,646 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:11:53,646 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:53,646 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:53,646 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:11:53,646 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:53,646 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:53,646 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:11:53,651 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-08 01:11:53,651 - werkzeug - INFO -  * Running on http://192.168.100.100:5002/ (Press CTRL+C to quit)
+2025-04-08 01:11:53,652 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:11:54,087 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:11:54,087 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:54,087 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:54,087 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:11:54,087 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:54,087 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:11:54,087 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:11:54,090 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:11:54,098 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:12:16,963 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:12:20,842 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:12:20,843 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:12:20] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:12:35,339 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:12:38,822 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:12:38,823 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:12:38] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:12:52,137 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/test_api.py', reloading
+2025-04-08 01:12:52,144 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/test_api.py', reloading
+2025-04-08 01:12:52,302 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:12:52,304 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:12:52,890 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:12:52,890 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:12:52,890 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:12:52,890 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:12:52,890 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:12:52,890 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:12:52,890 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:12:52,895 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:12:52,904 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:12:53,211 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:12:53,211 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:12:53,211 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:12:53,211 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:12:53,212 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:12:53,212 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:12:53,212 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:12:53,216 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:12:53,224 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:13:07,447 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/test_api.py', reloading
+2025-04-08 01:13:07,623 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/test_api.py', reloading
+2025-04-08 01:13:07,626 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:13:07,747 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:13:08,224 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:13:08,224 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:08,224 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:08,224 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:13:08,224 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:08,224 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:08,224 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:13:08,229 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:13:08,235 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:13:08,502 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:13:08,503 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:08,503 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:08,503 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:13:08,503 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:08,503 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:08,503 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:13:08,506 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:13:08,512 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:13:18,756 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:13:23,155 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:13:23,155 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:13:23] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:13:40,232 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/test_api.py', reloading
+2025-04-08 01:13:40,335 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:13:40,347 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/test_api.py', reloading
+2025-04-08 01:13:40,472 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:13:41,066 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:13:41,066 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:41,066 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:41,066 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:13:41,066 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:41,066 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:41,066 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:13:41,071 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:13:41,079 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:13:41,168 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:13:41,168 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:41,168 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:41,168 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:13:41,168 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:41,168 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:13:41,168 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:13:41,173 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:13:41,182 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:13:50,446 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:13:53,871 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:13:53,872 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:13:53] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:13:54,541 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:13:58,330 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:13:58,331 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:13:58] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:13:58,338 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:13:58] "GET /api/languages HTTP/1.1" 200 -
+2025-04-08 01:13:58,343 - agents.trip_planning_agent - INFO - Processing trip planning request: Hello! I'm planning to visit Saudi Arabia. Can you help me?
+2025-04-08 01:13:58,352 - agents.trip_planning_agent - INFO - Extracted trip details: {'origin': 'Riyadh', 'destination': 'VISIT SAUDI ARABIA', 'departure_date': '2025-04-15', 'return_date': '2025-04-18', 'travelers': 2, 'duration': 3, 'interests': ['Sightseeing', 'Shopping']}
+2025-04-08 01:13:58,352 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to VISIT SAUDI ARABIA
+2025-04-08 01:13:58,352 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'visit', 'departure_date': '2025-04-08'}
+2025-04-08 01:13:58,353 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in VISIT SAUDI ARABIA
+2025-04-08 01:13:58,353 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Visit', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:13:58,353 - agents.trip_planning_agent - INFO - Created 12 trip packages
+2025-04-08 01:13:58,355 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:13:58] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:13:58,359 - agents.flight_booking_agent - INFO - Processing flight booking request: I need a flight from Riyadh to Jeddah on 2025-05-15 for 2 passengers in economy class.
+2025-04-08 01:13:58,359 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'jeddah', 'departure_date': '2025-05-15'}
+2025-04-08 01:13:58,359 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:13:58] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:13:58,363 - agents.hotel_booking_agent - INFO - Processing hotel booking request: I need a hotel in Jeddah from 2025-05-15 to 2025-05-18 for 2 guests and 1 room.
+2025-04-08 01:13:58,364 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Jeddah', 'check_in': '2025-05-15', 'check_out': '2025-05-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:13:58,365 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:13:58] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:13:58,368 - agents.trip_planning_agent - INFO - Processing trip planning request: Can you create a 3-day trip plan for me in Jeddah? I'm interested in history, culture, and food.
+2025-04-08 01:13:58,368 - agents.trip_planning_agent - INFO - Extracted trip details: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-15', 'return_date': '2025-04-18', 'travelers': 2, 'duration': 3, 'interests': ['Culture', 'Food']}
+2025-04-08 01:13:58,368 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to Jeddah
+2025-04-08 01:13:58,369 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:13:58,369 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in Jeddah
+2025-04-08 01:13:58,369 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Jeddah', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:13:58,369 - agents.trip_planning_agent - INFO - Created 9 trip packages
+2025-04-08 01:13:58,375 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:13:58] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:13:58,429 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:13:58] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:13:58,431 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:13:58] "POST /api/reset HTTP/1.1" 200 -
+2025-04-08 01:13:58,437 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:13:58] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:16:57,118 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:17:00,398 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:17:00,400 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:17:00] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:17:00,408 - agents.trip_planning_agent - INFO - Processing trip planning request: Hello! I'm planning to visit Saudi Arabia for a week. Can you help me?
+2025-04-08 01:17:00,408 - agents.trip_planning_agent - INFO - Extracted trip details: {'origin': 'Riyadh', 'destination': 'VISIT SAUDI ARABIA FOR A WEEK', 'departure_date': '2025-04-15', 'return_date': '2025-04-18', 'travelers': 2, 'duration': 3, 'interests': ['Sightseeing', 'Shopping']}
+2025-04-08 01:17:00,409 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to VISIT SAUDI ARABIA FOR A WEEK
+2025-04-08 01:17:00,409 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'visit', 'departure_date': '2025-04-08'}
+2025-04-08 01:17:00,409 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in VISIT SAUDI ARABIA FOR A WEEK
+2025-04-08 01:17:00,409 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Visit', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:17:00,409 - agents.trip_planning_agent - INFO - Created 12 trip packages
+2025-04-08 01:17:00,412 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:17:00] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:17:01,425 - agents.flight_booking_agent - INFO - Processing flight booking request: I'd like to fly from London to Riyadh on May 20, 2025 and return on May 27
+2025-04-08 01:17:01,425 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'like', 'destination': 'fly', 'departure_date': '2025-04-08'}
+2025-04-08 01:17:01,426 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:17:01] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:17:02,439 - agents.flight_booking_agent - INFO - Processing flight booking request: Can you show me more flight options?
+2025-04-08 01:17:02,440 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:17:02,441 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:17:02] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:17:03,449 - agents.flight_booking_agent - INFO - Processing flight booking request: I'll take the Emirates flight. Now I need a hotel in Riyadh for my stay
+2025-04-08 01:17:03,449 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:17:03,450 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:17:03] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:19:05,732 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/agent_system.py', reloading
+2025-04-08 01:19:05,873 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:19:05,979 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/agent_system.py', reloading
+2025-04-08 01:19:06,175 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:19:06,788 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:19:06,788 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:06,788 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:06,788 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:19:06,788 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:06,789 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:06,789 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:19:06,791 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:19:06,791 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:06,791 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:06,791 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:19:06,791 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:06,791 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:06,791 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:19:06,793 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:19:06,795 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:19:06,800 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:19:06,800 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:19:31,485 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/agent_system.py', reloading
+2025-04-08 01:19:31,616 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:19:31,722 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/agent_system.py', reloading
+2025-04-08 01:19:31,897 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:19:32,434 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:19:32,434 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:32,434 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:32,434 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:19:32,434 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:32,434 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:32,434 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:19:32,438 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:19:32,446 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:19:32,461 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:19:32,462 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:32,462 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:32,462 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:19:32,462 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:32,462 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:32,462 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:19:32,466 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:19:32,472 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:19:50,839 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/agent_system.py', reloading
+2025-04-08 01:19:50,949 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:19:51,230 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/agent_system.py', reloading
+2025-04-08 01:19:51,327 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:19:51,826 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:19:51,826 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:51,826 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:51,826 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:19:51,826 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:51,826 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:51,826 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:19:51,831 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:19:51,838 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:19:51,935 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:19:51,935 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:51,935 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:51,935 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:19:51,935 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:51,936 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:19:51,936 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:19:51,940 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:19:51,946 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:20:00,342 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:20:00,342 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:20:00,342 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:20:00,342 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:20:00,342 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:20:00,342 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:20:00,342 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:20:13,420 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:20:17,196 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:20:17,197 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:20:17] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:20:24,375 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:20:27,900 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:20:27,901 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:20:27] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:20:27,908 - agents.agent_system - INFO - Session 49c10ea5-98ca-484b-bc5b-6a438a3f665d: Detected trip planning mention with topic change indicator
+2025-04-08 01:20:27,908 - agents.agent_system - INFO - Session 49c10ea5-98ca-484b-bc5b-6a438a3f665d: Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:20:27,908 - agents.trip_planning_agent - INFO - Processing trip planning request: Hello! I'm planning to visit Saudi Arabia for a week. Can you help me?
+2025-04-08 01:20:27,911 - agents.trip_planning_agent - INFO - Extracted trip details: {'origin': 'Riyadh', 'destination': 'VISIT SAUDI ARABIA FOR A WEEK', 'departure_date': '2025-04-15', 'return_date': '2025-04-18', 'travelers': 2, 'duration': 3, 'interests': ['Sightseeing', 'Shopping']}
+2025-04-08 01:20:27,912 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to VISIT SAUDI ARABIA FOR A WEEK
+2025-04-08 01:20:27,912 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'visit', 'departure_date': '2025-04-08'}
+2025-04-08 01:20:27,912 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in VISIT SAUDI ARABIA FOR A WEEK
+2025-04-08 01:20:27,912 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Visit', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:20:27,912 - agents.trip_planning_agent - INFO - Created 12 trip packages
+2025-04-08 01:20:27,913 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:20:27] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:20:28,923 - agents.agent_system - INFO - Session 49c10ea5-98ca-484b-bc5b-6a438a3f665d: Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:20:28,923 - agents.flight_booking_agent - INFO - Processing flight booking request: I'd like to fly from London to Riyadh on May 20, 2025 and return on May 27
+2025-04-08 01:20:28,923 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'like', 'destination': 'fly', 'departure_date': '2025-04-08'}
+2025-04-08 01:20:28,924 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:20:28] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:20:29,934 - agents.agent_system - INFO - Session 49c10ea5-98ca-484b-bc5b-6a438a3f665d: Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:20:29,934 - agents.flight_booking_agent - INFO - Processing flight booking request: Can you show me more flight options?
+2025-04-08 01:20:29,934 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:20:29,935 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:20:29] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:20:30,942 - agents.agent_system - INFO - Session 49c10ea5-98ca-484b-bc5b-6a438a3f665d: Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:20:30,942 - agents.flight_booking_agent - INFO - Processing flight booking request: I'll take the Emirates flight. Now I need a hotel in Riyadh for my stay
+2025-04-08 01:20:30,942 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:20:30,943 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:20:30] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:21:19,927 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/conversation_lead_agent.py', reloading
+2025-04-08 01:21:20,234 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/conversation_lead_agent.py', reloading
+2025-04-08 01:21:20,335 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:21:20,860 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:21:20,860 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:20,860 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:20,860 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:21:20,860 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:20,860 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:20,860 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:21:20,864 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:21:20,871 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:21:30,451 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:21:30,451 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:30,451 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:30,451 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:21:30,452 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:30,452 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:30,452 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:21:42,647 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/wsgi.py', reloading
+2025-04-08 01:21:42,853 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:21:43,445 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:21:43,445 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:43,445 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:43,445 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:21:43,445 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:43,445 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:21:43,445 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:21:43,450 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:21:43,456 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:22:09,488 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/test_e2e.py', reloading
+2025-04-08 01:22:09,596 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:22:10,209 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:22:10,209 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:10,209 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:10,209 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:22:10,209 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:10,209 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:10,209 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:22:10,214 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:22:10,227 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:22:19,107 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:22:19,107 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:19,107 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:19,107 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:22:19,107 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:19,107 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:19,107 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:22:19,111 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-08 01:22:19,111 - werkzeug - INFO -  * Running on http://192.168.100.100:5003/ (Press CTRL+C to quit)
+2025-04-08 01:22:19,112 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:22:19,676 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:22:19,676 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:19,676 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:19,676 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:22:19,676 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:19,676 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:22:19,676 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:22:19,679 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:22:19,686 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:22:38,929 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:22:42,307 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:22:42,308 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:22:42] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:22:42,313 - agents.conversation_lead_agent - INFO - Detected likely trip planning intent with context transition
+2025-04-08 01:22:42,314 - agents.agent_system - INFO - Session af15f4b4-6c95-4d38-9163-ae77e431ec27: Detected trip planning mention with topic change indicator
+2025-04-08 01:22:42,314 - agents.agent_system - INFO - Session af15f4b4-6c95-4d38-9163-ae77e431ec27: Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:22:42,314 - agents.trip_planning_agent - INFO - Processing trip planning request: Hello! I'm planning to visit Saudi Arabia for a week. Can you help me?
+2025-04-08 01:22:42,319 - agents.trip_planning_agent - INFO - Extracted trip details: {'origin': 'Riyadh', 'destination': 'VISIT SAUDI ARABIA FOR A WEEK', 'departure_date': '2025-04-15', 'return_date': '2025-04-18', 'travelers': 2, 'duration': 3, 'interests': ['Sightseeing', 'Shopping']}
+2025-04-08 01:22:42,319 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to VISIT SAUDI ARABIA FOR A WEEK
+2025-04-08 01:22:42,319 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'visit', 'departure_date': '2025-04-08'}
+2025-04-08 01:22:42,320 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in VISIT SAUDI ARABIA FOR A WEEK
+2025-04-08 01:22:42,320 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Visit', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:22:42,321 - agents.trip_planning_agent - INFO - Created 12 trip packages
+2025-04-08 01:22:42,322 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:22:42] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:22:43,333 - agents.agent_system - INFO - Session af15f4b4-6c95-4d38-9163-ae77e431ec27: Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:22:43,333 - agents.flight_booking_agent - INFO - Processing flight booking request: I'd like to fly from London to Riyadh on May 20, 2025 and return on May 27
+2025-04-08 01:22:43,333 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'like', 'destination': 'fly', 'departure_date': '2025-04-08'}
+2025-04-08 01:22:43,334 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:22:43] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:22:44,345 - agents.conversation_lead_agent - INFO - Detected likely flight booking intent with context transition
+2025-04-08 01:22:44,345 - agents.agent_system - INFO - Session af15f4b4-6c95-4d38-9163-ae77e431ec27: Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:22:44,345 - agents.flight_booking_agent - INFO - Processing flight booking request: Can you show me more flight options?
+2025-04-08 01:22:44,345 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:22:44,346 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:22:44] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:22:45,350 - agents.agent_system - INFO - Session af15f4b4-6c95-4d38-9163-ae77e431ec27: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:22:45,350 - agents.hotel_booking_agent - INFO - Processing hotel booking request: I'll take the Emirates flight. Now I need a hotel in Riyadh for my stay
+2025-04-08 01:22:45,350 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:22:45,350 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:22:45] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:22:46,357 - agents.agent_system - INFO - Session af15f4b4-6c95-4d38-9163-ae77e431ec27: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:22:46,357 - agents.hotel_booking_agent - INFO - Processing hotel booking request: I'd prefer a 5-star hotel close to the city center
+2025-04-08 01:22:46,357 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:22:46,358 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:22:46] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:22:47,363 - agents.agent_system - INFO - Session af15f4b4-6c95-4d38-9163-ae77e431ec27: Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:22:47,363 - agents.trip_planning_agent - INFO - Processing trip planning request: Can you suggest a 3-day itinerary for Riyadh?
+2025-04-08 01:22:47,364 - agents.trip_planning_agent - INFO - Extracted trip details: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-15', 'return_date': '2025-04-18', 'travelers': 2, 'duration': 3, 'interests': ['Sightseeing', 'Shopping']}
+2025-04-08 01:22:47,364 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to Jeddah
+2025-04-08 01:22:47,364 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:22:47,364 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in Jeddah
+2025-04-08 01:22:47,364 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Jeddah', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:22:47,364 - agents.trip_planning_agent - INFO - Created 12 trip packages
+2025-04-08 01:22:47,366 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:22:47] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:23:31,055 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/trip_planning_agent.py', reloading
+2025-04-08 01:23:31,133 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:23:31,368 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/trip_planning_agent.py', reloading
+2025-04-08 01:23:31,497 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:23:31,820 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:23:31,820 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:23:31,820 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:23:31,820 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:23:31,820 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:23:31,820 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:23:31,820 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:23:31,825 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:23:31,832 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:23:32,311 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:23:32,311 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:23:32,311 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:23:32,311 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:23:32,311 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:23:32,311 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:23:32,311 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:23:32,315 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:23:32,321 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:24:20,502 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/trip_planning_agent.py', reloading
+2025-04-08 01:24:20,638 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:24:20,770 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/agents/trip_planning_agent.py', reloading
+2025-04-08 01:24:20,866 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:30:06,584 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:30:06,584 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:30:06,584 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:30:06,584 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:30:06,584 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:30:06,584 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:30:06,584 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:30:06,588 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-08 01:30:06,588 - werkzeug - INFO -  * Running on http://192.168.100.100:5003/ (Press CTRL+C to quit)
+2025-04-08 01:30:06,589 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:30:07,149 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:30:07,149 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:30:07,149 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:30:07,149 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:30:07,149 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:30:07,149 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:30:07,149 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:30:07,152 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:30:07,166 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:30:25,552 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:30:30,362 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:30:30,364 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:30] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:30:30,370 - agents.conversation_lead_agent - INFO - Detected likely trip planning intent with context transition
+2025-04-08 01:30:30,372 - agents.agent_system - INFO - Session 739c076f-eea1-416a-a504-45478be6b74a: Detected trip planning mention with topic change indicator
+2025-04-08 01:30:30,372 - agents.agent_system - INFO - Session 739c076f-eea1-416a-a504-45478be6b74a: Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:30:30,372 - agents.trip_planning_agent - INFO - Processing trip planning request: Hello! I'm planning to visit Saudi Arabia for a week. Can you help me?
+2025-04-08 01:30:30,373 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to Jeddah
+2025-04-08 01:30:30,373 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:30:30,373 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in Jeddah
+2025-04-08 01:30:30,374 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Jeddah', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:30:30,376 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:30] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:31,389 - agents.agent_system - INFO - Session 739c076f-eea1-416a-a504-45478be6b74a: Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:30:31,389 - agents.flight_booking_agent - INFO - Processing flight booking request: I'd like to fly from London to Riyadh on May 20, 2025 and return on May 27
+2025-04-08 01:30:31,390 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'like', 'destination': 'fly', 'departure_date': '2025-04-08'}
+2025-04-08 01:30:31,391 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:31] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:32,399 - agents.conversation_lead_agent - INFO - Detected likely flight booking intent with context transition
+2025-04-08 01:30:32,400 - agents.agent_system - INFO - Session 739c076f-eea1-416a-a504-45478be6b74a: Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:30:32,400 - agents.flight_booking_agent - INFO - Processing flight booking request: Can you show me more flight options?
+2025-04-08 01:30:32,400 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:30:32,401 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:32] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:33,414 - agents.agent_system - INFO - Session 739c076f-eea1-416a-a504-45478be6b74a: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:30:33,415 - agents.hotel_booking_agent - INFO - Processing hotel booking request: I'll take the Emirates flight. Now I need a hotel in Riyadh for my stay
+2025-04-08 01:30:33,415 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:30:33,417 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:33] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:34,429 - agents.agent_system - INFO - Session 739c076f-eea1-416a-a504-45478be6b74a: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:30:34,429 - agents.hotel_booking_agent - INFO - Processing hotel booking request: I'd prefer a 5-star hotel close to the city center
+2025-04-08 01:30:34,430 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:30:34,431 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:34] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:35,445 - agents.agent_system - INFO - Session 739c076f-eea1-416a-a504-45478be6b74a: Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:30:35,445 - agents.trip_planning_agent - INFO - Processing trip planning request: Can you suggest a 3-day itinerary for Riyadh?
+2025-04-08 01:30:35,446 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to Riyadh
+2025-04-08 01:30:35,446 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'riyadh', 'departure_date': '2025-04-08'}
+2025-04-08 01:30:35,446 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in Riyadh
+2025-04-08 01:30:35,446 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:30:35,449 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:35] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:36,466 - agents.agent_system - INFO - Session 739c076f-eea1-416a-a504-45478be6b74a: Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:30:36,467 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:36] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:37,481 - agents.conversation_lead_agent - INFO - Detected likely trip planning intent with context transition
+2025-04-08 01:30:37,481 - agents.agent_system - INFO - Session da014acb-8dc7-4d94-944b-227d9ec7db23: Detected trip planning mention with topic change indicator
+2025-04-08 01:30:37,481 - agents.agent_system - INFO - Session da014acb-8dc7-4d94-944b-227d9ec7db23: Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:30:37,481 - agents.trip_planning_agent - INFO - Processing trip planning request: Hello! I'm planning to visit Jeddah next month
+2025-04-08 01:30:37,482 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to Jeddah
+2025-04-08 01:30:37,482 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:30:37,482 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in Jeddah
+2025-04-08 01:30:37,482 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Jeddah', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:30:37,485 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:37] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:38,500 - agents.agent_system - INFO - Session da014acb-8dc7-4d94-944b-227d9ec7db23: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:30:38,500 - agents.hotel_booking_agent - INFO - Processing hotel booking request: أريد حجز فندق في جدة
+2025-04-08 01:30:38,500 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:30:38,502 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:38] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:39,509 - agents.conversation_lead_agent - INFO - Detected likely hotel booking intent with context transition
+2025-04-08 01:30:39,510 - agents.agent_system - INFO - Session da014acb-8dc7-4d94-944b-227d9ec7db23: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:30:39,510 - agents.hotel_booking_agent - INFO - Processing hotel booking request: أريد فندق قريب من البحر
+2025-04-08 01:30:39,510 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:30:39,511 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:39] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:40,527 - agents.agent_system - INFO - Session da014acb-8dc7-4d94-944b-227d9ec7db23: Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:30:40,528 - agents.trip_planning_agent - INFO - Processing trip planning request: Thank you! Can you also suggest some tourist attractions?
+2025-04-08 01:30:40,528 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to Jeddah
+2025-04-08 01:30:40,528 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:30:40,528 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in Jeddah
+2025-04-08 01:30:40,528 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Jeddah', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:30:40,531 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:40] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:41,545 - agents.agent_system - INFO - Session b735c350-d34a-4c00-a5b5-23a9ce5eceb2: Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:30:41,552 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:41] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:42,559 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:42] "[31m[1mPOST /api/chat HTTP/1.1[0m" 400 -
+2025-04-08 01:30:43,569 - agents.conversation_lead_agent - INFO - Detected likely flight booking intent with context transition
+2025-04-08 01:30:43,569 - agents.agent_system - INFO - Session b735c350-d34a-4c00-a5b5-23a9ce5eceb2: Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:30:43,569 - agents.flight_booking_agent - INFO - Processing flight booking request: I need a flight
+2025-04-08 01:30:43,569 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:30:43,570 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:43] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:44,583 - agents.agent_system - INFO - Session b735c350-d34a-4c00-a5b5-23a9ce5eceb2: Short follow-up detected, maintaining flight_booking context
+2025-04-08 01:30:44,584 - agents.agent_system - INFO - Session b735c350-d34a-4c00-a5b5-23a9ce5eceb2: Raw intent: general_conversation, Resolved intent: flight_booking
+2025-04-08 01:30:44,584 - agents.flight_booking_agent - INFO - Processing flight booking request: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+2025-04-08 01:30:44,585 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:30:44,585 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:44] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:30:45,593 - agents.conversation_lead_agent - INFO - Detected likely hotel booking intent with context transition
+2025-04-08 01:30:45,593 - agents.agent_system - INFO - Session b735c350-d34a-4c00-a5b5-23a9ce5eceb2: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:30:45,594 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Can you help me find a hotel?
+2025-04-08 01:30:45,594 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:30:45,595 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:30:45] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:31:36,410 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/setup.py', reloading
+2025-04-08 01:31:36,541 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:31:37,296 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:31:37,296 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:31:37,296 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:31:37,296 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:31:37,296 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:31:37,296 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:31:37,296 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:31:37,300 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:31:37,307 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:31:47,547 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/setup.py', reloading
+2025-04-08 01:31:47,641 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:31:48,182 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:31:48,182 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:31:48,182 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:31:48,182 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:31:48,182 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:31:48,182 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:31:48,182 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:31:48,185 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:31:48,191 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:32:51,983 - agents.conversation_lead_agent - INFO - Detected likely trip planning intent with context transition
+2025-04-08 01:32:51,983 - agents.agent_system - INFO - Session 29210754-9533-4d31-b802-aa256d85eac9: Detected trip planning mention with topic change indicator
+2025-04-08 01:32:51,983 - agents.agent_system - INFO - Session 29210754-9533-4d31-b802-aa256d85eac9: Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:32:51,983 - agents.trip_planning_agent - INFO - Processing trip planning request: Hello! I'm planning to visit Saudi Arabia for a week. Can you help me?
+2025-04-08 01:32:51,984 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to Jeddah
+2025-04-08 01:32:51,984 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:32:51,984 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in Jeddah
+2025-04-08 01:32:51,984 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Jeddah', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:32:51,985 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:32:51] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:32:52,998 - agents.agent_system - INFO - Session 29210754-9533-4d31-b802-aa256d85eac9: Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:32:52,999 - agents.flight_booking_agent - INFO - Processing flight booking request: I'd like to fly from London to Riyadh on May 20, 2025 and return on May 27
+2025-04-08 01:32:52,999 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'like', 'destination': 'fly', 'departure_date': '2025-04-08'}
+2025-04-08 01:32:53,000 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:32:53] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:32:54,012 - agents.conversation_lead_agent - INFO - Detected likely flight booking intent with context transition
+2025-04-08 01:32:54,013 - agents.agent_system - INFO - Session 29210754-9533-4d31-b802-aa256d85eac9: Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:32:54,013 - agents.flight_booking_agent - INFO - Processing flight booking request: Can you show me more flight options?
+2025-04-08 01:32:54,013 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:32:54,014 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:32:54] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:32:55,026 - agents.agent_system - INFO - Session 29210754-9533-4d31-b802-aa256d85eac9: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:32:55,026 - agents.hotel_booking_agent - INFO - Processing hotel booking request: I'll take the Emirates flight. Now I need a hotel in Riyadh for my stay
+2025-04-08 01:32:55,027 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:32:55,028 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:32:55] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:32:56,037 - agents.agent_system - INFO - Session 29210754-9533-4d31-b802-aa256d85eac9: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:32:56,037 - agents.hotel_booking_agent - INFO - Processing hotel booking request: I'd prefer a 5-star hotel close to the city center
+2025-04-08 01:32:56,037 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:32:56,038 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:32:56] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:32:57,047 - agents.agent_system - INFO - Session 29210754-9533-4d31-b802-aa256d85eac9: Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:32:57,048 - agents.trip_planning_agent - INFO - Processing trip planning request: Can you suggest a 3-day itinerary for Riyadh?
+2025-04-08 01:32:57,048 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to Riyadh
+2025-04-08 01:32:57,048 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'riyadh', 'departure_date': '2025-04-08'}
+2025-04-08 01:32:57,048 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in Riyadh
+2025-04-08 01:32:57,048 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:32:57,049 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:32:57] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:32:58,054 - agents.agent_system - INFO - Session 29210754-9533-4d31-b802-aa256d85eac9: Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:32:58,055 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:32:58] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:32:59,069 - agents.conversation_lead_agent - INFO - Detected likely trip planning intent with context transition
+2025-04-08 01:32:59,069 - agents.agent_system - INFO - Session 04e09db5-a897-44ba-9e48-6b31c8bff579: Detected trip planning mention with topic change indicator
+2025-04-08 01:32:59,069 - agents.agent_system - INFO - Session 04e09db5-a897-44ba-9e48-6b31c8bff579: Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:32:59,069 - agents.trip_planning_agent - INFO - Processing trip planning request: Hello! I'm planning to visit Jeddah next month
+2025-04-08 01:32:59,069 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to Jeddah
+2025-04-08 01:32:59,069 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:32:59,069 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in Jeddah
+2025-04-08 01:32:59,069 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Jeddah', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:32:59,071 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:32:59] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:33:00,080 - agents.agent_system - INFO - Session 04e09db5-a897-44ba-9e48-6b31c8bff579: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:33:00,080 - agents.hotel_booking_agent - INFO - Processing hotel booking request: أريد حجز فندق في جدة
+2025-04-08 01:33:00,081 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:33:00,081 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:33:00] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:33:01,093 - agents.conversation_lead_agent - INFO - Detected likely hotel booking intent with context transition
+2025-04-08 01:33:01,094 - agents.agent_system - INFO - Session 04e09db5-a897-44ba-9e48-6b31c8bff579: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:33:01,094 - agents.hotel_booking_agent - INFO - Processing hotel booking request: أريد فندق قريب من البحر
+2025-04-08 01:33:01,094 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:33:01,095 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:33:01] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:33:02,104 - agents.agent_system - INFO - Session 04e09db5-a897-44ba-9e48-6b31c8bff579: Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:33:02,104 - agents.trip_planning_agent - INFO - Processing trip planning request: Thank you! Can you also suggest some tourist attractions?
+2025-04-08 01:33:02,104 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to Jeddah
+2025-04-08 01:33:02,104 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:33:02,104 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in Jeddah
+2025-04-08 01:33:02,104 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Jeddah', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:33:02,106 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:33:02] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:33:03,114 - agents.agent_system - INFO - Session e70999f8-15cf-4a8e-b497-2c09a34b7ea7: Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:33:03,114 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:33:03] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:33:04,123 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:33:04] "[31m[1mPOST /api/chat HTTP/1.1[0m" 400 -
+2025-04-08 01:33:05,133 - agents.conversation_lead_agent - INFO - Detected likely flight booking intent with context transition
+2025-04-08 01:33:05,134 - agents.agent_system - INFO - Session e70999f8-15cf-4a8e-b497-2c09a34b7ea7: Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:33:05,134 - agents.flight_booking_agent - INFO - Processing flight booking request: I need a flight
+2025-04-08 01:33:05,134 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:33:05,135 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:33:05] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:33:06,154 - agents.agent_system - INFO - Session e70999f8-15cf-4a8e-b497-2c09a34b7ea7: Short follow-up detected, maintaining flight_booking context
+2025-04-08 01:33:06,154 - agents.agent_system - INFO - Session e70999f8-15cf-4a8e-b497-2c09a34b7ea7: Raw intent: general_conversation, Resolved intent: flight_booking
+2025-04-08 01:33:06,154 - agents.flight_booking_agent - INFO - Processing flight booking request: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+2025-04-08 01:33:06,155 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'Riyadh', 'destination': 'Jeddah', 'departure_date': '2025-04-08'}
+2025-04-08 01:33:06,156 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:33:06] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:33:07,163 - agents.conversation_lead_agent - INFO - Detected likely hotel booking intent with context transition
+2025-04-08 01:33:07,164 - agents.agent_system - INFO - Session e70999f8-15cf-4a8e-b497-2c09a34b7ea7: Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:33:07,164 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Can you help me find a hotel?
+2025-04-08 01:33:07,164 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Riyadh', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:33:07,165 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:33:07] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:47:28,707 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/app.py', reloading
+2025-04-08 01:47:28,907 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:47:29,881 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:47:29,881 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:47:29,881 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:47:29,881 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:47:29,881 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:47:29,881 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:47:29,881 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:47:29,885 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:47:29,893 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:48:00,499 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/app.py', reloading
+2025-04-08 01:48:00,658 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:48:01,387 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:48:01,387 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:48:01,387 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:48:01,387 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:48:01,387 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:48:01,387 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:48:01,387 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:48:01,391 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:48:01,398 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:48:16,318 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-08 01:48:16,318 - werkzeug - INFO -  * Running on http://192.168.100.100:5010/ (Press CTRL+C to quit)
+2025-04-08 01:48:16,319 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:48:16,772 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:48:16,779 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:54:19,548 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:54:22,203 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:54:22] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-04-08 01:54:22,209 - __main__ - INFO - Created new session: 
+2025-04-08 01:54:22,209 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:54:22,210 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:54:22,211 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:54:22,212 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:54:22,212 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:54:22,212 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:54:22,212 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:54:22,212 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:54:22,212 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:54:22,212 - agents.agent_orchestrator - INFO - Processing message in en for session 
+2025-04-08 01:54:22,213 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:54:22,215 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'en'}
+2025-04-08 01:54:22,216 - agents.agent_system - INFO - Session : Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:54:22,216 - agents.agent_orchestrator - INFO - Generated response for session  with intent general
+2025-04-08 01:54:22,216 - __main__ - INFO - Session : Processed message with intent general, history length: 2
+2025-04-08 01:54:22,217 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:54:22] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:54:23,266 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:54:23,267 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:54:23] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:54:23,911 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:54:27,739 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:54:27,740 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:54:27] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:54:43,202 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:54:43] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-04-08 01:54:43,205 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:54:43,205 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:54:43,205 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:54:43,205 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:54:43,205 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:54:43,205 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:54:43,205 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:54:43,205 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:54:43,205 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:54:43,205 - agents.agent_orchestrator - INFO - Processing message in en for session 
+2025-04-08 01:54:43,205 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:54:43,205 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'en', 'destinations': ['Dammam']}
+2025-04-08 01:54:43,205 - agents.agent_system - INFO - Session : Detected flight mention with topic change indicator
+2025-04-08 01:54:43,206 - agents.agent_system - INFO - Session : Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:54:43,206 - agents.flight_booking_agent - INFO - Processing flight booking request: book flight from dammam to cairo tomorrow
+2025-04-08 01:54:43,206 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'dammam', 'destination': 'cairo', 'departure_date': '2025-04-08'}
+2025-04-08 01:54:43,206 - agents.agent_orchestrator - INFO - Generated response for session  with intent flight_booking
+2025-04-08 01:54:43,206 - __main__ - INFO - Session : Processed message with intent flight_booking, history length: 4
+2025-04-08 01:54:43,206 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:54:43] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:54:59,201 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:55:00,089 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:00] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:00,092 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:55:00,092 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:00,092 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:00,092 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:55:00,092 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:00,092 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:00,092 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:55:00,093 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:55:00,093 - agents.language_utils - INFO - Detected Arabic text
+2025-04-08 01:55:00,093 - agents.agent_orchestrator - INFO - Processing message in ar for session 
+2025-04-08 01:55:00,093 - agents.language_utils - INFO - Detected Arabic text
+2025-04-08 01:55:00,093 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'ar'}
+2025-04-08 01:55:00,093 - agents.agent_system - INFO - Session : Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:55:00,093 - agents.agent_orchestrator - INFO - Generated response for session  with intent general
+2025-04-08 01:55:00,093 - __main__ - INFO - Session : Processed message with intent general, history length: 6
+2025-04-08 01:55:00,094 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:00] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:03,169 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:55:03,171 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:03] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:55:10,393 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:10] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:10,396 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:55:10,397 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:10,397 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:10,397 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:55:10,397 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:10,397 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:10,397 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:55:10,397 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:55:10,397 - agents.language_utils - INFO - Detected Arabic text
+2025-04-08 01:55:10,398 - agents.agent_orchestrator - INFO - Processing message in ar for session 
+2025-04-08 01:55:10,398 - agents.language_utils - INFO - Detected Arabic text
+2025-04-08 01:55:10,398 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'ar'}
+2025-04-08 01:55:10,398 - agents.agent_system - INFO - Session : Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:55:10,398 - agents.agent_orchestrator - INFO - Generated response for session  with intent general
+2025-04-08 01:55:10,398 - __main__ - INFO - Session : Processed message with intent general, history length: 8
+2025-04-08 01:55:10,399 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:10] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:13,471 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:55:13,472 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:13,472 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:13,472 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:55:13,472 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:13,472 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:13,472 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:55:13,472 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:55:13,472 - agents.language_utils - INFO - Detected Arabic text
+2025-04-08 01:55:13,473 - agents.agent_orchestrator - INFO - Processing message in ar for session 
+2025-04-08 01:55:13,473 - agents.language_utils - INFO - Detected Arabic text
+2025-04-08 01:55:13,473 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'ar'}
+2025-04-08 01:55:13,473 - agents.agent_system - INFO - Session : Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:55:13,473 - agents.agent_orchestrator - INFO - Generated response for session  with intent general
+2025-04-08 01:55:13,473 - __main__ - INFO - Session : Processed message with intent general, history length: 10
+2025-04-08 01:55:13,474 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:13] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:18,491 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:18] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:18,494 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:55:18,494 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:18,494 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:18,494 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:55:18,494 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:18,494 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:18,494 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:55:18,495 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:55:18,495 - agents.language_utils - INFO - Detected Arabic text
+2025-04-08 01:55:18,495 - agents.agent_orchestrator - INFO - Processing message in ar for session 
+2025-04-08 01:55:18,495 - agents.language_utils - INFO - Detected Arabic text
+2025-04-08 01:55:18,495 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'ar'}
+2025-04-08 01:55:18,495 - agents.agent_system - INFO - Session : Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:55:18,495 - agents.agent_orchestrator - INFO - Generated response for session  with intent general
+2025-04-08 01:55:18,495 - __main__ - INFO - Session : Processed message with intent general, history length: 12
+2025-04-08 01:55:18,497 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:18] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:19,404 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:55:19,405 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:19,405 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:19,405 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:55:19,405 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:19,405 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:19,405 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:55:19,405 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:55:19,405 - agents.language_utils - INFO - Detected Arabic text
+2025-04-08 01:55:19,405 - agents.agent_orchestrator - INFO - Processing message in ar for session 
+2025-04-08 01:55:19,405 - agents.language_utils - INFO - Detected Arabic text
+2025-04-08 01:55:19,405 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'ar'}
+2025-04-08 01:55:19,406 - agents.agent_system - INFO - Session : Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:55:19,406 - agents.agent_orchestrator - INFO - Generated response for session  with intent general
+2025-04-08 01:55:19,406 - __main__ - INFO - Session : Processed message with intent general, history length: 14
+2025-04-08 01:55:19,406 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:19] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:27,777 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:27] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:27,781 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:55:27,782 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:27,782 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:27,782 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:55:27,782 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:27,782 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:27,782 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:55:27,783 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:55:27,784 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:55:27,784 - agents.agent_orchestrator - INFO - Processing message in en for session 
+2025-04-08 01:55:27,785 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:55:27,787 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'en'}
+2025-04-08 01:55:27,787 - agents.agent_system - INFO - Session : Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:55:27,787 - agents.agent_orchestrator - INFO - Generated response for session  with intent general
+2025-04-08 01:55:27,787 - __main__ - INFO - Session : Processed message with intent general, history length: 16
+2025-04-08 01:55:27,788 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:27] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:28,462 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:55:30,921 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:55:30,921 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:30,922 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:30,922 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:55:30,922 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:30,922 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:30,922 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:55:30,922 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:55:30,922 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:55:30,922 - agents.agent_orchestrator - INFO - Processing message in en for session 
+2025-04-08 01:55:30,922 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:55:30,922 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'en', 'destinations': ['Riyadh']}
+2025-04-08 01:55:30,922 - agents.agent_system - INFO - Session : Detected flight mention with topic change indicator
+2025-04-08 01:55:30,922 - agents.agent_system - INFO - Session : Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:55:30,923 - agents.flight_booking_agent - INFO - Processing flight booking request: I want to book a flight to Riyadh
+2025-04-08 01:55:30,923 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'want', 'destination': 'book', 'departure_date': '2025-04-08'}
+2025-04-08 01:55:30,923 - agents.agent_orchestrator - INFO - Generated response for session  with intent flight_booking
+2025-04-08 01:55:30,923 - __main__ - INFO - Session : Processed message with intent flight_booking, history length: 18
+2025-04-08 01:55:30,924 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:30] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:31,160 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:55:31,161 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:31] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:55:32,970 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:32] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:32,973 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:55:32,974 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:32,974 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:32,974 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:55:32,974 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:32,974 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:32,974 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:55:32,974 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:55:32,974 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:55:32,974 - agents.agent_orchestrator - INFO - Processing message in en for session 
+2025-04-08 01:55:32,974 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:55:32,975 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'en', 'destinations': ['Jeddah']}
+2025-04-08 01:55:32,975 - agents.agent_system - INFO - Session : Detected hotel mention with topic change indicator
+2025-04-08 01:55:32,975 - agents.agent_system - INFO - Session : Raw intent: hotel_booking, Resolved intent: hotel_booking
+2025-04-08 01:55:32,975 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Find me a hotel in Jeddah
+2025-04-08 01:55:32,976 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Jeddah', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:55:32,976 - agents.agent_orchestrator - INFO - Generated response for session  with intent hotel_booking
+2025-04-08 01:55:32,977 - __main__ - INFO - Session : Processed message with intent hotel_booking, history length: 20
+2025-04-08 01:55:32,977 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:32] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:55:36,303 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:55:36,303 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:36,303 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:36,304 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:55:36,304 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:36,304 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:55:36,304 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:55:36,304 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:55:36,304 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:55:36,304 - agents.agent_orchestrator - INFO - Processing message in en for session 
+2025-04-08 01:55:36,304 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:55:36,304 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'en'}
+2025-04-08 01:55:36,304 - agents.conversation_lead_agent - INFO - Detected likely trip planning intent with context transition
+2025-04-08 01:55:36,305 - agents.agent_system - INFO - Session : Detected trip planning mention with topic change indicator
+2025-04-08 01:55:36,305 - agents.agent_system - INFO - Session : Raw intent: trip_planning, Resolved intent: trip_planning
+2025-04-08 01:55:36,305 - agents.trip_planning_agent - INFO - Processing trip planning request: Plan a trip to AlUla for next weekend
+2025-04-08 01:55:36,305 - agents.flight_booking_agent - INFO - Processing flight booking request: Flight from Riyadh to AlUla
+2025-04-08 01:55:36,306 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'riyadh', 'destination': 'alula', 'departure_date': '2025-04-08'}
+2025-04-08 01:55:36,306 - agents.hotel_booking_agent - INFO - Processing hotel booking request: Hotel in AlUla
+2025-04-08 01:55:36,306 - agents.hotel_booking_agent - INFO - Extracted hotel info: {'destination': 'Alula', 'check_in': '2025-04-15', 'check_out': '2025-04-18', 'guests': 2, 'price_per_night': 500}
+2025-04-08 01:55:36,307 - agents.agent_orchestrator - INFO - Generated response for session  with intent trip_planning
+2025-04-08 01:55:36,307 - __main__ - INFO - Session : Processed message with intent trip_planning, history length: 22
+2025-04-08 01:55:36,307 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:55:36] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:56:24,394 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:56:24] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-04-08 01:56:24,401 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:56:24,401 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:56:24,401 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:56:24,401 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:56:24,402 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:56:24,402 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:56:24,402 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:56:24,402 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:56:24,402 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:56:24,402 - agents.agent_orchestrator - INFO - Processing message in en for session 
+2025-04-08 01:56:24,402 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:56:24,403 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'en'}
+2025-04-08 01:56:24,403 - agents.agent_system - INFO - Session : Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:56:24,403 - agents.agent_orchestrator - INFO - Generated response for session  with intent general
+2025-04-08 01:56:24,403 - __main__ - INFO - Session : Processed message with intent general, history length: 24
+2025-04-08 01:56:24,403 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:56:24] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:56:42,286 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:56:42] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-04-08 01:56:42,288 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:56:42,288 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:56:42,289 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:56:42,289 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:56:42,289 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:56:42,289 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:56:42,289 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:56:42,289 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:56:42,289 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:56:42,289 - agents.agent_orchestrator - INFO - Processing message in en for session 
+2025-04-08 01:56:42,289 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:56:42,289 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'en'}
+2025-04-08 01:56:42,289 - agents.agent_system - INFO - Session : Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 01:56:42,289 - agents.agent_orchestrator - INFO - Generated response for session  with intent general
+2025-04-08 01:56:42,289 - __main__ - INFO - Session : Processed message with intent general, history length: 26
+2025-04-08 01:56:42,290 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:56:42] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:58:01,528 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:58:04,446 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:58:04,447 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:58:04] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:58:24,586 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:58:27,558 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:58:27,559 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:58:27] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:58:59,249 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/app.py', reloading
+2025-04-08 01:58:59,387 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:58:59,861 - werkzeug - INFO -  * Detected change in '/Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend/app.py', reloading
+2025-04-08 01:58:59,991 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:59:00,405 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:59:00,405 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:59:00,405 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:59:00,405 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:59:00,405 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:59:00,405 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:59:00,405 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:59:00,410 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:59:00,420 - werkzeug - INFO -  * Debugger PIN: 550-191-130
+2025-04-08 01:59:00,693 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:59:00,699 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:59:15,296 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-08 01:59:15,296 - werkzeug - INFO -  * Running on http://192.168.100.100:5111/ (Press CTRL+C to quit)
+2025-04-08 01:59:15,296 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 01:59:15,824 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 01:59:15,832 - werkzeug - INFO -  * Debugger PIN: 562-805-267
+2025-04-08 01:59:37,694 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:59:38,292 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:59:38] "OPTIONS /api/chat HTTP/1.1" 200 -
+2025-04-08 01:59:38,295 - __main__ - INFO - Created new session: 
+2025-04-08 01:59:38,295 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 01:59:38,295 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:59:38,295 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:59:38,295 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 01:59:38,295 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 01:59:38,295 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 01:59:38,295 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 01:59:38,296 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 01:59:38,296 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:59:38,296 - agents.agent_orchestrator - INFO - Processing message in en for session 
+2025-04-08 01:59:38,296 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 01:59:38,296 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'en', 'destinations': ['Riyadh']}
+2025-04-08 01:59:38,296 - agents.agent_system - INFO - Session : Detected flight mention with topic change indicator
+2025-04-08 01:59:38,296 - agents.agent_system - INFO - Session : Raw intent: flight_booking, Resolved intent: flight_booking
+2025-04-08 01:59:38,296 - agents.flight_booking_agent - INFO - Processing flight booking request: I want to book a flight to Riyadh
+2025-04-08 01:59:38,297 - agents.flight_booking_agent - INFO - Extracted flight info: {'origin': 'want', 'destination': 'book', 'departure_date': '2025-04-08'}
+2025-04-08 01:59:38,297 - agents.agent_orchestrator - INFO - Generated response for session  with intent flight_booking
+2025-04-08 01:59:38,297 - __main__ - INFO - Session : Processed message with intent flight_booking, history length: 2
+2025-04-08 01:59:38,297 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:59:38] "POST /api/chat HTTP/1.1" 200 -
+2025-04-08 01:59:41,134 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:59:41,134 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:59:41] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:59:41,778 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:59:46,475 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:59:46,476 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:59:46] "GET /api/health HTTP/1.1" 200 -
+2025-04-08 01:59:49,350 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 01:59:52,773 - agents.llm_utils - INFO - LLM connection test successful
+2025-04-08 01:59:52,775 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 01:59:52] "GET /api/health HTTP/1.1" 200 -
