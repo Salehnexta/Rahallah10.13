@@ -232,20 +232,81 @@ class TripPlanningAgent:
         }
         
         try:
-            # Try to extract city names
-            from_pattern = r"from\s+([A-Za-z\s]+)\s+to"
-            to_pattern = r"to\s+([A-Za-z\s]+)"
+            # Common airport codes to city mappings
+            airport_codes = {
+                "DMM": "Dammam",
+                "RUH": "Riyadh",
+                "JED": "Jeddah",
+                "BKK": "Bangkok",
+                "DXB": "Dubai",
+                "DOH": "Doha",
+                "LHR": "London",
+                "JFK": "New York",
+                "CDG": "Paris",
+                "MAD": "Madrid"
+            }
+            
             import re
             
-            # Look for 'from [city] to' pattern
-            from_match = re.search(from_pattern, message, re.IGNORECASE)
-            if from_match and from_match.group(1).strip():
-                trip_details["origin"] = from_match.group(1).strip()
+            # Enhanced patterns to extract origins and destinations, including airport codes
+            from_patterns = [
+                # Standard patterns for origin
+                r"from\s+([A-Za-z\s]+)\s+to",  # from City to
+                r"from\s+([A-Za-z\s]+)\b",     # from City
+                r"(DMM|RUH|JED|BKK|DXB|DOH|LHR|JFK|CDG|MAD)\s+to",  # Airport code to
+                r"from\s+(DMM|RUH|JED|BKK|DXB|DOH|LHR|JFK|CDG|MAD)\b"  # from Airport code
+            ]
             
-            # Look for 'to [city]' pattern
-            to_match = re.search(to_pattern, message, re.IGNORECASE)
-            if to_match and to_match.group(1).strip():
-                trip_details["destination"] = to_match.group(1).strip()
+            to_patterns = [
+                # Standard patterns for destination
+                r"to\s+([A-Za-z\s]+)",         # to City
+                r"to\s+(DMM|RUH|JED|BKK|DXB|DOH|LHR|JFK|CDG|MAD)\b",  # to Airport code
+                r"\b(DMM|RUH|JED|BKK|DXB|DOH|LHR|JFK|CDG|MAD)(?:\s|$)"  # just Airport code
+            ]
+            
+            # Look for origin patterns
+            for pattern in from_patterns:
+                from_match = re.search(pattern, message, re.IGNORECASE)
+                if from_match and from_match.group(1).strip():
+                    origin = from_match.group(1).strip().upper()
+                    # If it's an airport code, convert to city name
+                    if origin in airport_codes:
+                        trip_details["origin"] = airport_codes[origin]
+                    else:
+                        trip_details["origin"] = origin
+                    break  # Stop after first match
+            
+            # Look for destination patterns
+            for pattern in to_patterns:
+                to_match = re.search(pattern, message, re.IGNORECASE)
+                if to_match and to_match.group(1).strip():
+                    destination = to_match.group(1).strip().upper()
+                    # If it's an airport code, convert to city name
+                    if destination in airport_codes:
+                        trip_details["destination"] = airport_codes[destination]
+                    else:
+                        trip_details["destination"] = destination
+                    break  # Stop after first match
+            
+            # More specific patterns for "X to Y" format
+            city_to_city = re.search(r"([A-Za-z]{3})\s+to\s+([A-Za-z]{3})", message, re.IGNORECASE)
+            if city_to_city:
+                origin_code = city_to_city.group(1).upper()
+                dest_code = city_to_city.group(2).upper()
+                if origin_code in airport_codes:
+                    trip_details["origin"] = airport_codes[origin_code]
+                if dest_code in airport_codes:
+                    trip_details["destination"] = airport_codes[dest_code]
+            
+            # Handle "BKK from DMM" pattern 
+            dest_from_origin = re.search(r"([A-Za-z]{3})\s+from\s+([A-Za-z]{3})", message, re.IGNORECASE)
+            if dest_from_origin:
+                dest_code = dest_from_origin.group(1).upper()
+                origin_code = dest_from_origin.group(2).upper()
+                if origin_code in airport_codes:
+                    trip_details["origin"] = airport_codes[origin_code]
+                if dest_code in airport_codes:
+                    trip_details["destination"] = airport_codes[dest_code]
             
             # Extract dates (YYYY-MM-DD format)
             date_pattern = r"\d{4}-\d{2}-\d{2}"
@@ -254,6 +315,27 @@ class TripPlanningAgent:
                 trip_details['departure_date'] = dates[0]
                 if len(dates) > 1:
                     trip_details['return_date'] = dates[1]
+            
+            # Handle relative date references
+            after_months_match = re.search(r"after\s+(\d+)\s+months?", message, re.IGNORECASE)
+            if after_months_match:
+                months = int(after_months_match.group(1))
+                departure_date = datetime.now() + timedelta(days=30*months)
+                return_date = departure_date + timedelta(days=7)  # Default 7-day trip
+                trip_details['departure_date'] = departure_date.strftime("%Y-%m-%d")
+                trip_details['return_date'] = return_date.strftime("%Y-%m-%d")
+            
+            # Handle "next week/month" patterns
+            if "next week" in message.lower():
+                departure_date = datetime.now() + timedelta(days=7)
+                return_date = departure_date + timedelta(days=7)
+                trip_details['departure_date'] = departure_date.strftime("%Y-%m-%d")
+                trip_details['return_date'] = return_date.strftime("%Y-%m-%d")
+            elif "next month" in message.lower():
+                departure_date = datetime.now() + timedelta(days=30)
+                return_date = departure_date + timedelta(days=7)
+                trip_details['departure_date'] = departure_date.strftime("%Y-%m-%d")
+                trip_details['return_date'] = return_date.strftime("%Y-%m-%d")
             
             # Look for travelers count
             traveler_pattern = r"(\d+)\s+(?:traveler|passenger|people|person)s?"
@@ -342,9 +424,9 @@ class TripPlanningAgent:
                 logger.warning("No flight or hotel data available to create packages")
                 return trip_packages
             
-            # Limit number of combinations to avoid too many packages
-            max_flights = min(len(flight_data), 3)
-            max_hotels = min(len(hotel_data), 3)
+            # Ensure at least 5 options when available
+            max_flights = min(len(flight_data), 5)
+            max_hotels = min(len(hotel_data), 5)
             
             # Create combinations of flights and hotels
             for i in range(max_flights):

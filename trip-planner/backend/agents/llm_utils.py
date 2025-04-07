@@ -124,7 +124,7 @@ def generate_response(system_prompt, user_message, conversation_history=None, te
             "success": False
         }
 
-def generate_flight_options(origin, destination, departure_date, return_date=None, num_options=3):
+def generate_flight_options(origin, destination, departure_date, return_date=None, num_options=5):
     """
     Generate mock flight options using DeepSeek
     
@@ -238,14 +238,14 @@ def generate_flight_options(origin, destination, departure_date, return_date=Non
         logger.error(f"Error generating flight options: {str(e)}")
         return {"flights": [], "return_flights": [], "is_round_trip": False}
 
-def generate_hotel_options(destination, check_in, check_out, num_options=3):
+def generate_hotel_options(destination, check_in, check_out=None, num_options=5):
     """
     Generate mock hotel options using DeepSeek
     
     Args:
         destination (str): City name
         check_in (str): Check-in date (YYYY-MM-DD)
-        check_out (str): Check-out date (YYYY-MM-DD)
+        check_out (str, optional): Check-out date (YYYY-MM-DD)
         num_options (int): Number of hotel options to generate
         
     Returns:
