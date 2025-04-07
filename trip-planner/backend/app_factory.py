@@ -52,9 +52,4 @@ def create_app(test_config=None):
     from routes.api import api_bp
     app.register_blueprint(api_bp, url_prefix='/api')
     
-    # Add health check route
-    @app.route('/health')
-    def health():
-        return {"status": "healthy", "version": "1.0.4"}
-    
     return app

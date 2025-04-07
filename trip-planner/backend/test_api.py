@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Base URL for API
-BASE_URL = "http://localhost:5000"
+BASE_URL = "http://localhost:5002"
 
 def test_health_endpoint():
     """Test the health check endpoint"""
@@ -223,13 +223,15 @@ def main():
     """Main function to run tests"""
     print("=== Trip Planning Assistant API Test ===")
     
-    # Check if server is running
+    # Test if server is running
     try:
-        requests.get(f"{BASE_URL}/api/health", timeout=2)
-    except requests.exceptions.ConnectionError:
-        print("Error: Cannot connect to the server. Please make sure the Flask app is running.")
-        print(f"Expected server at: {BASE_URL}")
-        print("Run the server with: python app.py")
+        requests.get(f"{BASE_URL}/api/health", timeout=10)
+    except Exception as e:
+        print("Error: Flask server is not running. Please start the server first.")
+        print(f"Server should be running at {BASE_URL}")
+        print("\nCommand to start server:")
+        print("cd /Users/salehgazwani/Desktop/repo/Rahallah10.13/trip-planner/backend")
+        print("python wsgi.py")
         return
     
     # Run tests

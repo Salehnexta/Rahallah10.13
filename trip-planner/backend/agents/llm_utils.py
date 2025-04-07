@@ -10,7 +10,11 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from typing import Dict, List, Any, Optional, Callable
 import langgraph.graph as lg
-from langgraph.graph import END, StateGraph, START
+from langgraph.graph import StateGraph
+
+# Define constants for LangGraph 0.0.19 compatibility
+START = "__start__"
+END = "__end__"
 from typing_extensions import TypedDict, NotRequired
 
 # Configure logging

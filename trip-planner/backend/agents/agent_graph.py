@@ -4,8 +4,12 @@ Defines the agent graph structure for coordinating multiple specialized agents
 """
 import logging
 from typing import Dict, Any, Callable
-from langgraph.graph import StateGraph, START, END
+from langgraph.graph import StateGraph
 from typing_extensions import TypedDict, NotRequired
+
+# Define constants for LangGraph 0.0.19 compatibility
+START = "__start__"
+END = "__end__"
 
 # Configure logging
 logger = logging.getLogger(__name__)
