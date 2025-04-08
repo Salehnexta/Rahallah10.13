@@ -1,0 +1,179 @@
+<!-- Trip Planner Component -->
+<div x-data="TripPlanner.init()" class="bg-white rounded-lg shadow p-6">
+    <h2 class="text-2xl font-bold mb-6">Plan Your Trip</h2>
+
+    <!-- Error Message -->
+    <div x-show="error" class="mb-4 p-4 bg-red-100 text-red-700 rounded">
+        <p x-text="error"></p>
+    </div>
+
+    <!-- Destination Selection -->
+    <div class="mb-6">
+        <label class="block text-sm font-medium text-gray-700 mb-2">Destination</label>
+        <select x-model="selectedDestination" 
+                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                title="Select Destination">
+            <option value="">Select a destination</option>
+            <template x-for="destination in destinations" :key="destination.id">
+                <option :value="destination.id" x-text="destination.name"></option>
+            </template>
+        </select>
+    </div>
+
+    <!-- Date Range -->
+    <div class="mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Start Date</label>
+                <input type="date" 
+                       x-model="dates.start" 
+                       id="start-date"
+                       class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       title="Start Date">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">End Date</label>
+                <input type="date" 
+                       x-model="dates.end" 
+                       id="end-date"
+                       class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       title="End Date">
+            </div>
+        </div>
+    </div>
+
+    <!-- Budget Range -->
+    <div class="mb-6">
+        <label class="block text-sm font-medium text-gray-700 mb-2">Budget Range</label>
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Min</label>
+                <input type="number" 
+                       x-model="budget.min" 
+                       class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       title="Minimum Budget">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Max</label>
+                <input type="number" 
+                       x-model="budget.max" 
+                       class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       title="Maximum Budget">
+            </div>
+        </div>
+    </div>
+
+    <!-- Preferences -->
+    <div class="mb-6">
+        <h3 class="text-lg font-semibold mb-4">Preferences</h3>
+        
+        <!-- Accommodation Preferences -->
+        <div class="mb-4">
+            <h4 class="text-sm font-medium text-gray-700 mb-2">Accommodation</h4>
+            <div class="space-y-2">
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" 
+                           x-model="preferences.accommodation"
+                           value="hotel" 
+                           class="rounded"
+                           title="Hotel Accommodation">
+                    <span>Hotel</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" 
+                           x-model="preferences.accommodation"
+                           value="apartment" 
+                           class="rounded"
+                           title="Apartment Accommodation">
+                    <span>Apartment</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" 
+                           x-model="preferences.accommodation"
+                           value="hostel" 
+                           class="rounded"
+                           title="Hostel Accommodation">
+                    <span>Hostel</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Activities Preferences -->
+        <div class="mb-4">
+            <h4 class="text-sm font-medium text-gray-700 mb-2">Activities</h4>
+            <div class="space-y-2">
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" 
+                           x-model="preferences.activities"
+                           value="sightseeing" 
+                           class="rounded"
+                           title="Sightseeing Activities">
+                    <span>Sightseeing</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" 
+                           x-model="preferences.activities"
+                           value="adventure" 
+                           class="rounded"
+                           title="Adventure Activities">
+                    <span>Adventure</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" 
+                           x-model="preferences.activities"
+                           value="culture" 
+                           class="rounded"
+                           title="Cultural Activities">
+                    <span>Cultural</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Transportation Preferences -->
+        <div>
+            <h4 class="text-sm font-medium text-gray-700 mb-2">Transportation</h4>
+            <div class="space-y-2">
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" 
+                           x-model="preferences.transportation"
+                           value="flight" 
+                           class="rounded"
+                           title="Flight Transportation">
+                    <span>Flight</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" 
+                           x-model="preferences.transportation"
+                           value="train" 
+                           class="rounded"
+                           title="Train Transportation">
+                    <span>Train</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" 
+                           x-model="preferences.transportation"
+                           value="car" 
+                           class="rounded"
+                           title="Car Rental Transportation">
+                    <span>Car Rental</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex justify-end space-x-4">
+        <button @click="resetForm" 
+                class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300"
+                title="Reset Form">
+            Reset
+        </button>
+        <button @click="searchTrips" 
+                :disabled="loading"
+                class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+                title="Search Trips">
+            <span x-show="!loading">Search Trips</span>
+            <span x-show="loading">Searching...</span>
+        </button>
+    </div>
+</div>

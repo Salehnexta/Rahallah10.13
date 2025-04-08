@@ -1,0 +1,72 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="bg-white rounded-lg shadow-lg p-6">
+    <div class="mb-6">
+        <h1 class="text-2xl font-bold mb-2">Your Trip Itinerary</h1>
+        
+        <!-- Trip Summary -->
+        {% if trip_details.start_date and trip_details.end_date %}
+        <div class="flex flex-wrap gap-4 mb-4">
+            <div class="bg-blue-50 rounded-lg px-4 py-2">
+                <div class="text-sm text-gray-600">Start Date</div>
+                <div class="font-semibold">{{ trip_details.start_date }}</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg px-4 py-2">
+                <div class="text-sm text-gray-600">End Date</div>
+                <div class="font-semibold">{{ trip_details.end_date }}</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg px-4 py-2">
+                <div class="text-sm text-gray-600">Duration</div>
+                <div class="font-semibold">{{ trip_details.duration }} days</div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    
+    <!-- Itinerary Items -->
+    {% if itinerary_items|length > 0 %}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {% for item in itinerary_items %}
+        <div class="bg-white rounded-lg shadow border p-4 h-full flex flex-col">
+            <div class="flex-1">
+                <h3 class="font-semibold mb-2">{{ item.name }}</h3>
+                <p class="text-sm text-gray-600 mb-2">{{ item.description|truncate(100) }}</p>
+                {% if item.location %}
+                <div class="text-sm text-gray-600 mb-2">
+                    <i class="fas fa-map-marker-alt mr-1"></i> {{ item.location }}
+                </div>
+                {% endif %}
+                {% if item.rating %}
+                <div class="flex items-center mb-2">
+                    <span class="text-sm font-medium mr-1">{{ item.rating }}</span>
+                    <div class="text-yellow-400">
+                        {% for _ in range(item.rating|int) %}
+                            <i class="fas fa-star"></i>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            <div class="flex justify-end mt-3">
+                <button class="text-red-500 hover:text-red-700"
+                        hx-post="/api/remove-from-trip"
+                        hx-params="id={{ item.id }}"
+                        hx-target="closest div.bg-white"
+                        hx-swap="outerHTML">
+                    <i class="fas fa-trash mr-1"></i> Remove
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-10">
+        <p class="text-gray-500 mb-4">Your trip is empty! Add some attractions to get started.</p>
+        <a href="/explore" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+            Explore Attractions
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

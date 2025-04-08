@@ -1,0 +1,7 @@
+{% if items|length > 0 %}
+    {% for item in items %}
+        {% include 'components/trip_item.html' %}
+    {% endfor %}
+{% else %}
+    <p class="text-sm text-gray-400 text-center py-3">Add items to your trip!</p>
+{% endif %}

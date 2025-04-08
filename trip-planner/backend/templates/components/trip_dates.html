@@ -1,0 +1,44 @@
+<!-- Trip Dates Component -->
+<div id="trip-dates-container">
+    {% if trip_start_date and trip_end_date %}
+    <div class="mb-3">
+        <div class="flex justify-between items-center mb-1">
+            <h4 class="font-medium text-gray-700">Trip Dates</h4>
+            <button hx-get="/api/edit-trip-dates" 
+                    hx-target="#trip-dates-container" 
+                    hx-swap="outerHTML"
+                    class="text-xs text-blue-500 hover:text-blue-700">
+                <i class="fas fa-edit"></i> Edit
+            </button>
+        </div>
+        <div class="text-sm bg-blue-50 p-3 rounded-lg">
+            <div><span class="font-medium">Start:</span> {{ trip_start_date }}</div>
+            <div><span class="font-medium">End:</span> {{ trip_end_date }}</div>
+            {% if trip_duration %}
+            <div><span class="font-medium">Duration:</span> {{ trip_duration }} days</div>
+            {% endif %}
+        </div>
+    </div>
+    {% else %}
+    <form hx-post="/api/set-trip-dates" 
+          hx-target="#trip-dates-container" 
+          hx-swap="outerHTML"
+          class="space-y-3">
+        <div>
+            <label for="start_date" class="block text-sm font-medium text-gray-700">Start Date</label>
+            <input type="date" id="start_date" name="start_date" 
+                   class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                   required>
+        </div>
+        <div>
+            <label for="end_date" class="block text-sm font-medium text-gray-700">End Date</label>
+            <input type="date" id="end_date" name="end_date" 
+                   class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                   required>
+        </div>
+        <button type="submit" class="w-full py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-md">
+            Set Dates
+        </button>
+    </form>
+    {% endif %}
+</div>

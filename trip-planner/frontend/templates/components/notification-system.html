@@ -1,0 +1,88 @@
+<!-- Notification System Component -->
+<div x-data="notificationSystem()" class="fixed bottom-4 right-4 z-50">
+    <div class="notifications-container space-y-2">
+        <template x-for="notification in notifications" :key="notification.id">
+            <div class="notification"
+                 :class="notification.type"
+                 x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0 transform translate-y-4"
+                 x-transition:enter-end="opacity-100 transform translate-y-0"
+                 x-transition:leave="transition ease-in duration-200"
+                 x-transition:leave-start="opacity-100 transform translate-y-0"
+                 x-transition:leave-end="opacity-0 transform translate-y-4">
+                <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow-md">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center" :class="notification.iconClass">
+                            <i class="fas" :class="notification.icon"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium" x-text="notification.message"></p>
+                            <p class="text-xs text-gray-500" x-text="notification.timestamp"></p>
+                        </div>
+                    </div>
+                    <button @click="removeNotification(notification.id)" class="p-1 text-gray-400 hover:text-gray-500">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </template>
+    </div>
+</div>
+
+<script>
+    function notificationSystem() {
+        return {
+            notifications: [],
+            nextId: 1,
+            
+            init() {
+                // Listen for notification events
+                window.addEventListener('dispatch', (event) => {
+                    if (event.detail.type === 'notify') {
+                        this.addNotification(event.detail.data);
+                    }
+                });
+            },
+            
+            addNotification(data) {
+                const notification = {
+                    id: this.nextId++,
+                    message: data.message,
+                    type: data.type || 'info',
+                    timestamp: new Date().toLocaleTimeString(),
+                    icon: this.getIcon(data.type),
+                    iconClass: this.getIconClass(data.type)
+                };
+                
+                this.notifications.push(notification);
+                
+                // Auto-remove after 5 seconds
+                setTimeout(() => this.removeNotification(notification.id), 5000);
+            },
+            
+            removeNotification(id) {
+                this.notifications = this.notifications.filter(n => n.id !== id);
+            },
+            
+            getIcon(type) {
+                const icons = {
+                    'success': 'fa-check-circle',
+                    'error': 'fa-exclamation-circle',
+                    'info': 'fa-info-circle',
+                    'warning': 'fa-exclamation-triangle'
+                };
+                return icons[type] || icons['info'];
+            },
+            
+            getIconClass(type) {
+                const classes = {
+                    'success': 'bg-green-100 text-green-600',
+                    'error': 'bg-red-100 text-red-600',
+                    'info': 'bg-blue-100 text-blue-600',
+                    'warning': 'bg-yellow-100 text-yellow-600'
+                };
+                return classes[type] || classes['info'];
+            }
+        };
+    }
+</script>

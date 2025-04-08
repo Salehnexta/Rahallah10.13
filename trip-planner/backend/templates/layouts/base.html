@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahallah Trip Planner</title>
+    
+    <!-- HTMX for interactive UI without JavaScript -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    
+    <!-- Alpine.js for light JavaScript interactions -->
+    <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-xl font-bold text-gray-800">Rahallah Trip Planner</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/explore" class="text-gray-600 hover:text-gray-900">Explore</a>
+                    <a href="/chat" class="text-gray-600 hover:text-gray-900">Chat</a>
+                    <a href="/itinerary" class="text-gray-600 hover:text-gray-900">My Trip</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-white py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <p class="text-gray-600">© 2025 Rahallah Trip Planner</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-gray-900" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span class="sr-only">Twitter</span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

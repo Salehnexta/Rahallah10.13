@@ -1,0 +1,95 @@
+<div id="details-modal" class="modal-backdrop fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center" x-data>
+    <div class="modal-content bg-white rounded-lg max-w-2xl w-full overflow-hidden">
+        <!-- Modal Header -->
+        <div class="flex justify-between items-center p-4 border-b">
+            <h3 class="text-lg font-semibold">{{ attraction.name }}</h3>
+            <button class="text-gray-500 hover:text-gray-700 close-modal"
+                    hx-get="/api/close-modal"
+                    hx-target="#details-modal"
+                    hx-swap="outerHTML"
+                    title="Close Details">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Left Column: Info -->
+                <div>
+                    <div class="mb-4">
+                        <div class="flex items-center mb-2">
+                            <span class="text-xl font-medium">{{ attraction.rating }}</span>
+                            <div class="ml-2 text-yellow-400">
+                                {% for _ in range(attraction.rating|int) %}
+                                    <i class="fas fa-star"></i>
+                                {% endfor %}
+                                {% if attraction.rating % 1 >= 0.5 %}
+                                    <i class="fas fa-star-half-alt"></i>
+                                {% endif %}
+                                {% for _ in range(5 - attraction.rating|int - (1 if attraction.rating % 1 >= 0.5 else 0)) %}
+                                    <i class="far fa-star"></i>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% if attraction.price_level %}
+                        <div class="text-gray-600 mb-2">
+                            Price: {{ attraction.price_level }}
+                        </div>
+                        {% endif %}
+                        {% if attraction.location %}
+                        <div class="text-gray-600 mb-2">
+                            <i class="fas fa-map-marker-alt mr-1"></i> {{ attraction.location }}
+                        </div>
+                        {% endif %}
+                        {% if attraction.category %}
+                        <div class="text-gray-600 mb-2">
+                            <span class="px-2 py-1 bg-gray-100 rounded-full text-xs">{{ attraction.category }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <p class="text-gray-700">{{ attraction.description }}</p>
+
+                    <!-- Add to Trip Button -->
+                    <div class="mt-6">
+                        <button class="w-full py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-md"
+                                hx-post="/api/add-to-trip"
+                                hx-params="id={{ attraction.id }}"
+                                hx-swap="none"
+                                hx-trigger="click"
+                                hx-target="#trip-items-container">
+                            <i class="fas fa-plus mr-2"></i> Add to My Trip
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Map -->
+                <div>
+                    {% if attraction.coordinates %}
+                    <div id="attraction-map-{{ attraction.id }}" 
+                         class="h-64 rounded-lg border map-container"
+                         data-lat="{{ attraction.coordinates.lat }}"
+                         data-lng="{{ attraction.coordinates.lng }}"
+                         data-zoom="15"></div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const mapContainer = document.getElementById('attraction-map-{{ attraction.id }}');
+                            const lat = parseFloat(mapContainer.dataset.lat);
+                            const lng = parseFloat(mapContainer.dataset.lng);
+                            const zoom = parseInt(mapContainer.dataset.zoom);
+                            
+                            const map = L.map('attraction-map-{{ attraction.id }}').setView([lat, lng], zoom);
+                            
+                            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            }).addTo(map);
+                            
+                            L.marker([lat, lng]).addTo(map);
+                        });
+                    </script>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

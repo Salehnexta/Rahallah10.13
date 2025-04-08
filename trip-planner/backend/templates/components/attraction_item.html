@@ -1,0 +1,30 @@
+<div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+    <div class="p-4">
+        <h3 class="font-semibold">{{ attraction.name }}</h3>
+        <p class="text-sm text-gray-600">{{ attraction.description|truncate(100) }}</p>
+        <div class="mt-2 flex justify-between items-center">
+            <span class="text-sm text-gray-600">
+                {% if attraction.rating %}
+                    {{ attraction.rating }} <i class="fas fa-star text-yellow-400"></i>
+                {% endif %}
+            </span>
+            <div class="flex space-x-2">
+                <button class="px-3 py-1 text-blue-600 border border-blue-600 rounded hover:bg-blue-50"
+                        hx-get="/api/view-details"
+                        hx-params="id={{ attraction.id }}"
+                        hx-target="#details-modal"
+                        hx-swap="outerHTML">
+                    <i class="fas fa-info-circle mr-1"></i> Details
+                </button>
+                <button class="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
+                        hx-post="/api/add-to-trip"
+                        hx-params="id={{ attraction.id }}"
+                        hx-trigger="click"
+                        hx-swap="none"
+                        hx-target="#trip-items-container">
+                    <i class="fas fa-plus mr-1"></i> Add
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

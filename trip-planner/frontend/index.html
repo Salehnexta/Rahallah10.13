@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" x-data="State.init()">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planner</title>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Socket.IO Client -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Alpine State -->
+    <script defer src="js/state.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Components -->
+    <script type="text/template" id="notification-system">
+        <div class="fixed bottom-4 right-4 z-50">
+            <div class="notifications-container space-y-2">
+                <template x-for="notification in notifications" :key="notification.id">
+                    <div class="notification"
+                         :class="notification.type"
+                         x-transition:enter="transition ease-out duration-300"
+                         x-transition:enter-start="opacity-0 transform translate-y-4"
+                         x-transition:enter-end="opacity-100 transform translate-y-0"
+                         x-transition:leave="transition ease-in duration-200"
+                         x-transition:leave-start="opacity-100 transform translate-y-0"
+                         x-transition:leave-end="opacity-0 transform translate-y-4">
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow-md">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded-full flex items-center justify-center" :class="notification.iconClass">
+                                    <i class="fas" :class="notification.icon"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium" x-text="notification.message"></p>
+                                    <p class="text-xs text-gray-500" x-text="notification.timestamp"></p>
+                                </div>
+                            </div>
+                            <button @click="removeNotification(notification.id)" class="p-1 text-gray-400 hover:text-gray-500">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </script>
+</head>
+<body class="bg-gray-100">
+    <!-- Notification System -->
+    <div x-data="notificationSystem()" class="notification-system">
+        <div class="notifications-container" x-ref="notifications">
+            <!-- Notifications will be injected here -->
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div class="min-h-screen">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <h1 class="text-xl font-bold text-gray-800">Trip Planner</h1>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button @click="toggleSidebar" 
+                                class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300"
+                                title="Toggle Trip Planner Sidebar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <button @click="resetTrip" 
+                                class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                                title="Reset Current Trip Plan">
+                            Reset Trip
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-12 gap-6">
+                <!-- Trip Planner Sidebar -->
+                <div class="col-span-12 md:col-span-4" x-show="showSidebar">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h2 class="text-lg font-semibold mb-4">Plan Your Trip</h2>
+                        
+                        <!-- Destination Selection -->
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Destination</label>
+                            <select x-model="trip.destination" 
+                                    @change="$dispatch('notify', { message: 'Destination updated', type: 'info' })"
+                                    class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    title="Select Destination">
+                                <option value="">Select a destination</option>
+                                <template x-for="destination in destinations" :key="destination.id">
+                                    <option :value="destination.id" x-text="destination.name"></option>
+                                </template>
+                            </select>
+                        </div>
+
+                        <!-- Date Range -->
+                        <div class="mb-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Start Date</label>
+                                    <input type="date" 
+                                           x-model="trip.dates.start" 
+                                           @change="$dispatch('notify', { message: 'Start date updated', type: 'info' })"
+                                           class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                           title="Select Start Date">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">End Date</label>
+                                    <input type="date" 
+                                           x-model="trip.dates.end" 
+                                           @change="$dispatch('notify', { message: 'End date updated', type: 'info' })"
+                                           class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                           title="Select End Date">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Budget Range -->
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Budget Range</label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Min</label>
+                                    <input type="number" 
+                                           x-model="trip.budget.min" 
+                                           @change="$dispatch('notify', { message: 'Budget updated', type: 'info' })"
+                                           class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                           title="Minimum Budget">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Max</label>
+                                    <input type="number" 
+                                           x-model="trip.budget.max" 
+                                           @change="$dispatch('notify', { message: 'Budget updated', type: 'info' })"
+                                           class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                           title="Maximum Budget">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Preferences -->
+                        <div class="mb-6">
+                            <h3 class="text-sm font-medium text-gray-700 mb-4">Preferences</h3>
+                            
+                            <!-- Accommodation Preferences -->
+                            <div class="mb-4">
+                                <h4 class="text-xs font-medium text-gray-600 mb-2">Accommodation</h4>
+                                <div class="space-y-2">
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" 
+                                               x-model="trip.preferences.accommodation"
+                                               value="hotel" 
+                                               @change="$dispatch('notify', { message: 'Preferences updated', type: 'info' })"
+                                               class="rounded">
+                                        <span>Hotel</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" 
+                                               x-model="trip.preferences.accommodation"
+                                               value="apartment" 
+                                               @change="$dispatch('notify', { message: 'Preferences updated', type: 'info' })"
+                                               class="rounded">
+                                        <span>Apartment</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" 
+                                               x-model="trip.preferences.accommodation"
+                                               value="hostel" 
+                                               @change="$dispatch('notify', { message: 'Preferences updated', type: 'info' })"
+                                               class="rounded">
+                                        <span>Hostel</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Activities Preferences -->
+                            <div class="mb-4">
+                                <h4 class="text-xs font-medium text-gray-600 mb-2">Activities</h4>
+                                <div class="space-y-2">
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" 
+                                               x-model="trip.preferences.activities"
+                                               value="sightseeing" 
+                                               @change="$dispatch('notify', { message: 'Preferences updated', type: 'info' })"
+                                               class="rounded">
+                                        <span>Sightseeing</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" 
+                                               x-model="trip.preferences.activities"
+                                               value="adventure" 
+                                               @change="$dispatch('notify', { message: 'Preferences updated', type: 'info' })"
+                                               class="rounded">
+                                        <span>Adventure</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" 
+                                               x-model="trip.preferences.activities"
+                                               value="culture" 
+                                               @change="$dispatch('notify', { message: 'Preferences updated', type: 'info' })"
+                                               class="rounded">
+                                        <span>Cultural</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Transportation Preferences -->
+                            <div>
+                                <h4 class="text-xs font-medium text-gray-600 mb-2">Transportation</h4>
+                                <div class="space-y-2">
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" 
+                                               x-model="trip.preferences.transportation"
+                                               value="flight" 
+                                               @change="$dispatch('notify', { message: 'Preferences updated', type: 'info' })"
+                                               class="rounded">
+                                        <span>Flight</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" 
+                                               x-model="trip.preferences.transportation"
+                                               value="train" 
+                                               @change="$dispatch('notify', { message: 'Preferences updated', type: 'info' })"
+                                               class="rounded">
+                                        <span>Train</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <input type="checkbox" 
+                                               x-model="trip.preferences.transportation"
+                                               value="car" 
+                                               @change="$dispatch('notify', { message: 'Preferences updated', type: 'info' })"
+                                               class="rounded">
+                                        <span>Car Rental</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex justify-end space-x-4">
+                            <button @click="resetTrip" 
+                                    class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300"
+                                    title="Reset Trip Plan">
+                                Reset
+                            </button>
+                            <button @click="searchTrips" 
+                                    :disabled="loading"
+                                    class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+                                    title="Search Trips">
+                                <span x-show="!loading">Search Trips</span>
+                                <span x-show="loading">Searching...</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Interface -->
+                <div class="col-span-12 md:col-span-8">
+                    <div class="bg-white rounded-lg shadow p-6" x-ref="chat">
+                        <!-- Chat Messages -->
+                        <div class="space-y-4 h-[600px] overflow-y-auto" x-ref="messages">
+                            <template x-for="message in messages" :key="message.timestamp">
+                                <div class="flex" x-bind:class="message.role === 'user' ? 'justify-end' : 'justify-start'">
+                                    <div class="max-w-[70%]" x-bind:class="message.role === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-800'" class="px-4 py-3 rounded-lg">
+                                        <div class="text-sm" x-text="message.content"></div>
+                                        <div class="text-xs text-gray-500 mt-1" x-text="new Date(message.timestamp).toLocaleTimeString()"></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <!-- Message Input -->
+                        <div class="mt-4">
+                            <div class="flex space-x-2">
+                                <input type="text" 
+                                       x-model="message" 
+                                       @keydown.enter.prevent="sendMessage"
+                                       placeholder="Type your message..."
+                                       class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                       aria-label="Chat message input">
+                                <button @click="sendMessage" 
+                                        class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                                        :disabled="!message.trim()"
+                                        title="Send Message">
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Error Message -->
+    <div x-show="error" class="fixed bottom-4 left-4 z-50 p-4 bg-red-100 text-red-700 rounded">
+        <p x-text="error"></p>
+    </div>
+
+    <script>
+        function State() {
+            return {
+                // State properties and methods
+            }
+        }
+
+        function notificationSystem() {
+            return {
+                notifications: [],
+                removeNotification(id) {
+                    this.notifications = this.notifications.filter(notification => notification.id !== id);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

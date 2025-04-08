@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Explore Destinations - {{ super() }}{% endblock %}
+
+{% block content %}
+<div x-data="{ selectedAttraction: null, attractions: {{ attractions|tojson }} }">
+    <h1 class="text-3xl font-bold mb-6">Explore Destinations</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <template x-for="attraction in attractions" :key="attraction.id">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200"
+                 @click="selectedAttraction = attraction">
+                <img src="https://via.placeholder.com/300x200?text=Attraction+Image" alt="Attraction Image" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2" x-text="attraction.name"></h2>
+                    <p class="text-gray-600 text-sm mb-1" x-text="attraction.category"></p>
+                    <p class="text-gray-700 mb-3" x-text="attraction.description.substring(0, 100) + '...'"></p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-yellow-500">
+                            <i class="fas fa-star"></i> <span x-text="attraction.rating"></span>
+                        </span>
+                        <span class="text-gray-800 font-medium" x-text="attraction.price_level"></span>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <!-- Details Modal/Section (Example using Alpine) -->
+    <div x-show="selectedAttraction" 
+         x-transition 
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+         @click.away="selectedAttraction = null"
+         style="display: none;"> <!-- Initially hidden -->
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full p-6 relative">
+            <button @click="selectedAttraction = null" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
+            <h2 class="text-2xl font-bold mb-4" x-text="selectedAttraction?.name"></h2>
+            <p class="mb-2"><strong class="font-semibold">Category:</strong> <span x-text="selectedAttraction?.category"></span></p>
+            <p class="mb-2"><strong class="font-semibold">Location:</strong> <span x-text="selectedAttraction?.location"></span></p>
+            <p class="mb-4" x-text="selectedAttraction?.description"></p>
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-yellow-500"><i class="fas fa-star"></i> <span x-text="selectedAttraction?.rating"></span></span>
+                <span class="text-gray-800 font-medium" x-text="selectedAttraction?.price_level"></span>
+            </div>
+            <!-- Placeholder for Map -->
+            <div class="bg-gray-200 h-40 rounded flex items-center justify-center text-gray-500 mb-4">
+                Map Placeholder (Lat: <span x-text="selectedAttraction?.coordinates.lat"></span>, Lng: <span x-text="selectedAttraction?.coordinates.lng"></span>)
+            </div>
+            <!-- Add to Trip Button (Integration needed) -->
+            <button class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-150">
+                Add to Trip (Functionality TBD)
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+    // Any specific JS for the explore page can go here
+    console.log("Explore page loaded");
+</script>
+{% endblock %}

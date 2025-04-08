@@ -319,3 +319,245 @@
 2025-04-07 14:24:52,103 - werkzeug - INFO -  * Debugger PIN: 550-417-014
 2025-04-07 14:26:09,096 - werkzeug - INFO -  * Detected change in 'D:\\Desktop\\Rahallah10.13\\trip-planner\\backend\\agents\\llm_utils.py', reloading
 2025-04-07 14:26:09,222 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 14:39:53,508 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 14:39:54,636 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 14:39:54,650 - werkzeug - INFO -  * Debugger PIN: 773-354-244
+2025-04-08 14:39:54,941 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-08 14:39:54,941 - werkzeug - INFO -  * Running on http://192.168.10.47:5000/ (Press CTRL+C to quit)
+2025-04-08 14:40:12,827 - __main__ - INFO - Rendering home page
+2025-04-08 14:40:12,852 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:40:12] "GET /?vscodeBrowserReqId=1744112412820 HTTP/1.1" 200 -
+2025-04-08 14:40:12,909 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:40:12] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-08 14:40:12,911 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:40:12] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-08 14:40:13,581 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:40:13] "[33mGET /api/get-trip-items HTTP/1.1[0m" 404 -
+2025-04-08 14:40:23,689 - __main__ - INFO - Rendering home page
+2025-04-08 14:40:23,692 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:40:23] "GET / HTTP/1.1" 200 -
+2025-04-08 14:40:23,739 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:40:23] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-08 14:40:23,739 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:40:23] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-08 14:40:25,600 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:40:25] "[33mGET /api/get-trip-items HTTP/1.1[0m" 404 -
+2025-04-08 14:40:26,069 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:40:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-08 14:40:56,719 - __main__ - INFO - Filtering attractions - query: , category: sights
+2025-04-08 14:40:56,729 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:40:56] "GET /api/filter-attractions?category=sights&min_rating=&price_level= HTTP/1.1" 200 -
+2025-04-08 14:40:58,456 - __main__ - INFO - Filtering attractions - query: , category: sights
+2025-04-08 14:40:58,456 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:40:58] "GET /api/filter-attractions?category=sights&min_rating=4.5&price_level= HTTP/1.1" 200 -
+2025-04-08 14:41:02,188 - __main__ - INFO - Setting trip dates - start: 2025-04-09, end: 2025-04-10
+2025-04-08 14:41:02,188 - utils.persistence - INFO - [fcaf98ef-0879-40ba-bb5a-75d204a9281f] Starting update operation: set_trip_dates
+2025-04-08 14:41:02,191 - utils.persistence - INFO - [b2f93ee0-0a7f-4ae1-93e4-30c4f9d5432e] Starting read operation: load_trip_data
+2025-04-08 14:41:02,191 - utils.persistence - INFO - Trip data file does not exist: D:\Desktop\Rahallah10.14\Rahallah10.13\trip-planner\backend\data\trip_data.json. Creating default data.
+2025-04-08 14:41:02,193 - utils.persistence - INFO - [b2f93ee0-0a7f-4ae1-93e4-30c4f9d5432e] Completed read operation: load_trip_data in 1.80ms
+2025-04-08 14:41:02,193 - utils.persistence - INFO - Set trip dates: 2025-04-09 to 2025-04-10
+2025-04-08 14:41:02,193 - utils.persistence - INFO - [61867c43-f4a1-4de4-8607-5e98b218825c] Starting write operation: save_trip_data
+2025-04-08 14:41:02,195 - utils.persistence - INFO - [61867c43-f4a1-4de4-8607-5e98b218825c] Completed write operation: save_trip_data in 2.01ms
+2025-04-08 14:41:02,195 - utils.persistence - INFO - [fcaf98ef-0879-40ba-bb5a-75d204a9281f] Completed update operation: set_trip_dates in 7.42ms
+2025-04-08 14:41:02,195 - utils.persistence - INFO - [e786ee5b-2794-4d93-8046-c40251b8b99f] Starting read operation: load_trip_data
+2025-04-08 14:41:02,195 - utils.persistence - INFO - [e786ee5b-2794-4d93-8046-c40251b8b99f] Completed read operation: load_trip_data in 0.00ms
+2025-04-08 14:41:02,195 - utils.persistence - INFO - [c164f63e-35b3-4ad4-8f07-d6efd182bba9] Starting read operation: get_trip_duration
+2025-04-08 14:41:02,195 - utils.persistence - INFO - [342a8307-52c4-4968-83e0-2b69e8c4fc67] Starting read operation: load_trip_data
+2025-04-08 14:41:02,195 - utils.persistence - INFO - [342a8307-52c4-4968-83e0-2b69e8c4fc67] Completed read operation: load_trip_data in 0.00ms
+2025-04-08 14:41:02,195 - utils.persistence - INFO - [c164f63e-35b3-4ad4-8f07-d6efd182bba9] Completed read operation: get_trip_duration in 0.00ms
+2025-04-08 14:41:02,205 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:41:02] "POST /api/set-trip-dates HTTP/1.1" 200 -
+2025-04-08 14:41:08,255 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:41:08] "[33mGET /api/refresh-attractions HTTP/1.1[0m" 404 -
+2025-04-08 14:41:11,146 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:41:11] "[33mGET /api/search-attractions?search=f HTTP/1.1[0m" 404 -
+2025-04-08 14:41:12,123 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:41:12] "[33mGET /api/search-attractions?search=fin HTTP/1.1[0m" 404 -
+2025-04-08 14:41:13,237 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:41:13] "[33mGET /api/search-attractions?search=find%20 HTTP/1.1[0m" 404 -
+2025-04-08 14:41:14,646 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:41:14] "[33mGET /api/search-attractions?search=find%20me%20t HTTP/1.1[0m" 404 -
+2025-04-08 14:41:15,186 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:41:15] "[33mGET /api/search-attractions?search=find%20me%20tr HTTP/1.1[0m" 404 -
+2025-04-08 14:41:15,925 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:41:15] "[33mGET /api/search-attractions?search=find%20me%20trip HTTP/1.1[0m" 404 -
+2025-04-08 14:43:40,971 - werkzeug - INFO -  * Detected change in 'D:\\Desktop\\Rahallah10.14\\Rahallah10.13\\trip-planner\\backend\\app.py', reloading
+2025-04-08 14:43:41,267 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 14:43:42,720 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 14:43:42,724 - werkzeug - INFO -  * Debugger PIN: 773-354-244
+2025-04-08 14:43:42,861 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-08 14:43:42,862 - werkzeug - INFO -  * Running on http://192.168.10.47:5000/ (Press CTRL+C to quit)
+2025-04-08 14:45:29,968 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 14:45:31,119 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 14:45:31,121 - werkzeug - INFO -  * Debugger PIN: 773-354-244
+2025-04-08 14:45:31,219 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-08 14:45:31,219 - werkzeug - INFO -  * Running on http://192.168.10.47:5000/ (Press CTRL+C to quit)
+2025-04-08 14:45:50,195 - __main__ - INFO - Rendering home page
+2025-04-08 14:45:50,205 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:45:50] "GET /?vscodeBrowserReqId=1744112750184 HTTP/1.1" 200 -
+2025-04-08 14:45:50,286 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:45:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-08 14:45:50,290 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:45:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-08 14:45:50,326 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:45:50] "[33mGET /api/get-trip-items HTTP/1.1[0m" 404 -
+2025-04-08 14:46:00,409 - __main__ - INFO - Rendering home page
+2025-04-08 14:46:00,411 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:00] "GET /?vscodeBrowserReqId=1744112760385 HTTP/1.1" 200 -
+2025-04-08 14:46:00,433 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-08 14:46:00,433 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-08 14:46:00,539 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:00] "[33mGET /api/get-trip-items HTTP/1.1[0m" 404 -
+2025-04-08 14:46:01,292 - __main__ - INFO - Rendering home page
+2025-04-08 14:46:01,292 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:01] "GET / HTTP/1.1" 200 -
+2025-04-08 14:46:01,348 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-08 14:46:01,349 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-08 14:46:02,017 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:02] "[33mGET /api/get-trip-items HTTP/1.1[0m" 404 -
+2025-04-08 14:46:04,264 - __main__ - INFO - Rendering home page
+2025-04-08 14:46:04,265 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:04] "GET / HTTP/1.1" 200 -
+2025-04-08 14:46:04,315 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-08 14:46:04,315 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-08 14:46:04,441 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:46:04] "[33mGET /api/get-trip-items HTTP/1.1[0m" 404 -
+2025-04-08 14:50:00,261 - __main__ - INFO - Rendering home page
+2025-04-08 14:50:00,261 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:50:00] "GET /?vscodeBrowserReqId=1744113000245 HTTP/1.1" 200 -
+2025-04-08 14:50:00,272 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:50:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-08 14:50:00,273 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:50:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-08 14:50:00,358 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:50:00] "[33mGET /api/get-trip-items HTTP/1.1[0m" 404 -
+2025-04-08 14:51:04,293 - __main__ - INFO - Rendering home page
+2025-04-08 14:51:04,295 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:04] "GET /?vscodeBrowserReqId=1744113064279 HTTP/1.1" 200 -
+2025-04-08 14:51:04,308 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-08 14:51:04,309 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-08 14:51:04,399 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:04] "[33mGET /api/get-trip-items HTTP/1.1[0m" 404 -
+2025-04-08 14:51:05,192 - __main__ - INFO - Rendering home page
+2025-04-08 14:51:05,194 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:05] "GET /?vscodeBrowserReqId=1744113065186 HTTP/1.1" 200 -
+2025-04-08 14:51:05,219 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-08 14:51:05,221 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-08 14:51:05,310 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:05] "[33mGET /api/get-trip-items HTTP/1.1[0m" 404 -
+2025-04-08 14:51:27,739 - werkzeug - INFO -  * Detected change in 'D:\\Desktop\\Rahallah10.14\\Rahallah10.13\\trip-planner\\backend\\app.py', reloading
+2025-04-08 14:51:27,904 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 14:51:29,229 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 14:51:29,231 - werkzeug - INFO -  * Debugger PIN: 773-354-244
+2025-04-08 14:51:29,334 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-08 14:51:29,335 - werkzeug - INFO -  * Running on http://192.168.10.47:5000/ (Press CTRL+C to quit)
+2025-04-08 14:51:34,613 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 14:51:35,709 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 14:51:35,712 - werkzeug - INFO -  * Debugger PIN: 773-354-244
+2025-04-08 14:51:35,806 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2025-04-08 14:51:35,807 - werkzeug - INFO -  * Running on http://192.168.10.47:5000/ (Press CTRL+C to quit)
+2025-04-08 14:51:47,048 - __main__ - INFO - Rendering home page
+2025-04-08 14:51:47,055 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:47] "GET /?vscodeBrowserReqId=1744113107039 HTTP/1.1" 200 -
+2025-04-08 14:51:47,123 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-08 14:51:47,125 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-08 14:51:47,149 - utils.persistence - INFO - [5fd2d381-9265-492a-a57f-18197f740dbe] Starting read operation: load_trip_data
+2025-04-08 14:51:47,150 - utils.persistence - INFO - [5fd2d381-9265-492a-a57f-18197f740dbe] Completed read operation: load_trip_data in 1.00ms
+2025-04-08 14:51:47,150 - __main__ - INFO - Successfully retrieved trip items
+2025-04-08 14:51:47,151 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:47] "GET /api/get-trip-items HTTP/1.1" 200 -
+2025-04-08 14:51:59,606 - __main__ - INFO - Rendering home page
+2025-04-08 14:51:59,609 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:59] "GET /?vscodeBrowserReqId=1744113119592 HTTP/1.1" 200 -
+2025-04-08 14:51:59,631 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-08 14:51:59,632 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-08 14:51:59,707 - utils.persistence - INFO - [64e8f3cb-6f32-42ae-8a10-8342571dca3d] Starting read operation: load_trip_data
+2025-04-08 14:51:59,707 - utils.persistence - INFO - [64e8f3cb-6f32-42ae-8a10-8342571dca3d] Completed read operation: load_trip_data in 0.00ms
+2025-04-08 14:51:59,707 - __main__ - INFO - Successfully retrieved trip items
+2025-04-08 14:51:59,707 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:51:59] "GET /api/get-trip-items HTTP/1.1" 200 -
+2025-04-08 14:53:06,066 - werkzeug - INFO -  * Detected change in 'D:\\Desktop\\Rahallah10.14\\Rahallah10.13\\trip-planner\\backend\\app.py', reloading
+2025-04-08 14:53:06,088 - werkzeug - INFO -  * Detected change in 'D:\\Desktop\\Rahallah10.14\\Rahallah10.13\\trip-planner\\backend\\app.py', reloading
+2025-04-08 14:53:06,277 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 14:53:06,290 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 14:56:43,072 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 14:56:43,075 - werkzeug - INFO -  * Debugger PIN: 773-354-244
+2025-04-08 14:56:43,125 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 14:56:43,128 - werkzeug - INFO -  * Debugger PIN: 773-354-244
+2025-04-08 14:57:13,891 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.47:5000
+2025-04-08 14:57:13,895 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-08 14:57:13,896 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 14:57:14,937 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 14:57:14,937 - werkzeug - INFO -  * Debugger PIN: 773-354-244
+2025-04-08 14:58:33,427 - __main__ - DEBUG - [72c7cd44-27c3-49e4-9844-b9bdc7b36768] Request received: POST /api/chat-message
+2025-04-08 14:58:33,428 - __main__ - DEBUG - [72c7cd44-27c3-49e4-9844-b9bdc7b36768] Request body: message=Hello&session_id=test_session_123
+2025-04-08 14:58:33,428 - __main__ - INFO - [ea70aee0-f226-4afc-89b1-df92511bb403] Chat message received via HTMX
+2025-04-08 14:58:33,428 - __main__ - INFO - [ea70aee0-f226-4afc-89b1-df92511bb403] Chat request details: session_id=test_session_123, client_ip=127.0.0.1, user_agent=Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.3575
+2025-04-08 14:58:33,428 - __main__ - INFO - [ea70aee0-f226-4afc-89b1-df92511bb403] Creating new session: test_session_123
+2025-04-08 14:58:33,428 - __main__ - INFO - [ea70aee0-f226-4afc-89b1-df92511bb403] User message: Hello
+2025-04-08 14:58:33,428 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 14:58:33,435 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 14:58:33,435 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 14:58:33,435 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 14:58:33,436 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 14:58:33,437 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 14:58:33,437 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 14:58:33,437 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 14:58:33,438 - __main__ - DEBUG - [ea70aee0-f226-4afc-89b1-df92511bb403] Sending request to agent orchestrator
+2025-04-08 14:58:33,438 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 14:58:33,438 - agents.agent_orchestrator - INFO - Processing message in en for session test_session_123
+2025-04-08 14:58:33,439 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 14:58:33,439 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'en'}
+2025-04-08 14:58:33,440 - agents.agent_system - INFO - Session test_session_123: Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 14:58:33,440 - agents.agent_orchestrator - INFO - Generated response for session test_session_123 with intent general
+2025-04-08 14:58:33,442 - __main__ - INFO - [ea70aee0-f226-4afc-89b1-df92511bb403] Agent response received in 13.93ms
+2025-04-08 14:58:33,449 - __main__ - INFO - [ea70aee0-f226-4afc-89b1-df92511bb403] Chat request completed in 21.36ms
+2025-04-08 14:58:33,449 - __main__ - DEBUG - [72c7cd44-27c3-49e4-9844-b9bdc7b36768] Response sent: 200 OK
+2025-04-08 14:58:33,454 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:58:33] "POST /api/chat-message HTTP/1.1" 200 -
+2025-04-08 14:58:52,404 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.47:5000
+2025-04-08 14:58:52,404 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-08 14:58:52,406 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 14:58:53,434 - werkzeug - WARNING -  * Debugger is active!
+2025-04-08 14:58:53,436 - werkzeug - INFO -  * Debugger PIN: 773-354-244
+2025-04-08 14:59:24,320 - __main__ - DEBUG - [f4d01f0a-fdd2-48a4-9bdf-b9e3c9de3d79] Request received: GET /
+2025-04-08 14:59:24,321 - __main__ - INFO - Rendering home page
+2025-04-08 14:59:24,329 - __main__ - DEBUG - [f4d01f0a-fdd2-48a4-9bdf-b9e3c9de3d79] Response sent: 200 OK
+2025-04-08 14:59:24,330 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:59:24] "GET / HTTP/1.1" 200 -
+2025-04-08 14:59:24,430 - __main__ - DEBUG - [a64b1d0a-f594-413c-b5da-6365f7012530] Request received: GET /static/css/styles.css
+2025-04-08 14:59:24,502 - __main__ - DEBUG - [a64b1d0a-f594-413c-b5da-6365f7012530] Response sent: 200 OK
+2025-04-08 14:59:24,502 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:59:24] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-04-08 14:59:24,572 - __main__ - DEBUG - [df68a083-2877-4164-b96b-cb321f73a474] Request received: GET /static/js/main.js
+2025-04-08 14:59:24,572 - __main__ - DEBUG - [df68a083-2877-4164-b96b-cb321f73a474] Response sent: 200 OK
+2025-04-08 14:59:24,572 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:59:24] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-08 14:59:25,652 - __main__ - DEBUG - [0e85020e-b43f-452d-82b7-3525fc2f6473] Request received: GET /api/get-trip-items
+2025-04-08 14:59:25,653 - utils.persistence - INFO - [399a9d0e-15da-436a-a798-969b01dad988] Starting read operation: load_trip_data
+2025-04-08 14:59:25,654 - utils.persistence - DEBUG - Loading trip data from: D:\Desktop\Rahallah10.14\Rahallah10.13\trip-planner\backend\data\trip_data.json
+2025-04-08 14:59:25,655 - utils.persistence - INFO - [399a9d0e-15da-436a-a798-969b01dad988] Completed read operation: load_trip_data in 2.62ms
+2025-04-08 14:59:25,655 - __main__ - INFO - Successfully retrieved trip items
+2025-04-08 14:59:25,656 - __main__ - DEBUG - [0e85020e-b43f-452d-82b7-3525fc2f6473] Response sent: 200 OK
+2025-04-08 14:59:25,657 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:59:25] "GET /api/get-trip-items HTTP/1.1" 200 -
+2025-04-08 14:59:25,897 - __main__ - DEBUG - [9353d3ec-f384-4fa1-ae42-69241454a570] Request received: GET /favicon.ico
+2025-04-08 14:59:25,897 - __main__ - DEBUG - [9353d3ec-f384-4fa1-ae42-69241454a570] Response sent: 404 NOT FOUND
+2025-04-08 14:59:25,897 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:59:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-08 14:59:28,170 - __main__ - DEBUG - [f77a3007-7e7f-4f02-a791-e1be42838eff] Request received: GET /
+2025-04-08 14:59:28,170 - __main__ - INFO - Rendering home page
+2025-04-08 14:59:28,171 - __main__ - DEBUG - [f77a3007-7e7f-4f02-a791-e1be42838eff] Response sent: 200 OK
+2025-04-08 14:59:28,171 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:59:28] "GET / HTTP/1.1" 200 -
+2025-04-08 14:59:28,479 - __main__ - DEBUG - [3e3ba199-9a49-4348-a997-3fa336f0bec8] Request received: GET /static/css/styles.css
+2025-04-08 14:59:28,479 - __main__ - DEBUG - [3e3ba199-9a49-4348-a997-3fa336f0bec8] Response sent: 304 NOT MODIFIED
+2025-04-08 14:59:28,479 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:59:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-04-08 14:59:28,529 - __main__ - DEBUG - [d4fc7587-9f15-4843-9c47-71e08cbda9c0] Request received: GET /static/js/main.js
+2025-04-08 14:59:28,536 - __main__ - DEBUG - [d4fc7587-9f15-4843-9c47-71e08cbda9c0] Response sent: 304 NOT MODIFIED
+2025-04-08 14:59:28,536 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:59:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-08 14:59:28,871 - __main__ - DEBUG - [a9c676c5-f438-43d3-bcb1-93cb28f6cb17] Request received: GET /api/get-trip-items
+2025-04-08 14:59:28,872 - utils.persistence - INFO - [1f603378-36ee-4f5e-94d9-822fdb987199] Starting read operation: load_trip_data
+2025-04-08 14:59:28,875 - utils.persistence - DEBUG - Loading trip data from: D:\Desktop\Rahallah10.14\Rahallah10.13\trip-planner\backend\data\trip_data.json
+2025-04-08 14:59:28,877 - utils.persistence - INFO - [1f603378-36ee-4f5e-94d9-822fdb987199] Completed read operation: load_trip_data in 5.50ms
+2025-04-08 14:59:28,879 - __main__ - INFO - Successfully retrieved trip items
+2025-04-08 14:59:28,881 - __main__ - DEBUG - [a9c676c5-f438-43d3-bcb1-93cb28f6cb17] Response sent: 200 OK
+2025-04-08 14:59:28,881 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:59:28] "GET /api/get-trip-items HTTP/1.1" 200 -
+2025-04-08 14:59:38,725 - __main__ - DEBUG - [c002b5d6-3943-41a6-8d62-eb8fc5f9ae7d] Request received: GET /chat
+2025-04-08 14:59:38,728 - __main__ - INFO - Rendering chat page
+2025-04-08 14:59:38,730 - __main__ - DEBUG - [c002b5d6-3943-41a6-8d62-eb8fc5f9ae7d] Response sent: 200 OK
+2025-04-08 14:59:38,730 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:59:38] "GET /chat HTTP/1.1" 200 -
+2025-04-08 14:59:44,918 - __main__ - DEBUG - [6c313503-2a97-4f3e-95e7-aaed0514c46d] Request received: POST /api/chat-message
+2025-04-08 14:59:44,918 - __main__ - DEBUG - [6c313503-2a97-4f3e-95e7-aaed0514c46d] Request body: session_id=6ed2dd88-f426-48ae-ba5e-7e90d9b9afa1&message=hi%0A
+2025-04-08 14:59:44,918 - __main__ - INFO - [fc9dd093-3921-478f-98fa-7a9b6dd12db2] Chat message received via HTMX
+2025-04-08 14:59:44,918 - __main__ - INFO - [fc9dd093-3921-478f-98fa-7a9b6dd12db2] Chat request details: session_id=6ed2dd88-f426-48ae-ba5e-7e90d9b9afa1, client_ip=127.0.0.1, user_agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+2025-04-08 14:59:44,918 - __main__ - INFO - [fc9dd093-3921-478f-98fa-7a9b6dd12db2] User message: hi
+
+2025-04-08 14:59:44,918 - agents.conversation_lead_agent - INFO - Conversation Lead Agent initialized
+2025-04-08 14:59:44,918 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 14:59:44,918 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 14:59:44,918 - agents.trip_planning_agent - INFO - Trip Planning Agent initialized with LangGraph integration
+2025-04-08 14:59:44,918 - agents.flight_booking_agent - INFO - Flight Booking Agent initialized with LangGraph integration
+2025-04-08 14:59:44,918 - agents.hotel_booking_agent - INFO - Hotel Booking Agent initialized with LangGraph integration
+2025-04-08 14:59:44,918 - agents.agent_system - INFO - Agent System initialized with all specialized agents
+2025-04-08 14:59:44,927 - agents.agent_orchestrator - INFO - Agent Orchestrator initialized with Agent System
+2025-04-08 14:59:44,927 - __main__ - DEBUG - [fc9dd093-3921-478f-98fa-7a9b6dd12db2] Sending request to agent orchestrator
+2025-04-08 14:59:44,927 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 14:59:44,929 - agents.agent_orchestrator - INFO - Processing message in en for session 6ed2dd88-f426-48ae-ba5e-7e90d9b9afa1
+2025-04-08 14:59:44,929 - agents.language_utils - INFO - Detected English text (or non-Arabic)
+2025-04-08 14:59:44,929 - agents.agent_orchestrator - INFO - Updated user preferences: {'language': 'en'}
+2025-04-08 14:59:44,929 - agents.agent_system - INFO - Session 6ed2dd88-f426-48ae-ba5e-7e90d9b9afa1: Raw intent: general_conversation, Resolved intent: general_conversation
+2025-04-08 14:59:44,929 - agents.agent_orchestrator - INFO - Generated response for session 6ed2dd88-f426-48ae-ba5e-7e90d9b9afa1 with intent general
+2025-04-08 14:59:44,930 - __main__ - INFO - [fc9dd093-3921-478f-98fa-7a9b6dd12db2] Agent response received in 12.19ms
+2025-04-08 14:59:44,930 - __main__ - INFO - [fc9dd093-3921-478f-98fa-7a9b6dd12db2] Chat request completed in 12.19ms
+2025-04-08 14:59:44,930 - __main__ - DEBUG - [6c313503-2a97-4f3e-95e7-aaed0514c46d] Response sent: 200 OK
+2025-04-08 14:59:44,930 - werkzeug - INFO - 127.0.0.1 - - [08/Apr/2025 14:59:44] "POST /api/chat-message HTTP/1.1" 200 -
+2025-04-08 15:11:44,084 - werkzeug - INFO -  * Detected change in 'D:\\Desktop\\Rahallah10.14\\Rahallah10.13\\trip-planner\\backend\\app.py', reloading
+2025-04-08 15:11:44,330 - werkzeug - INFO -  * Restarting with stat
+2025-04-08 15:11:44,543 - werkzeug - INFO -  * Detected change in 'D:\\Desktop\\Rahallah10.14\\Rahallah10.13\\trip-planner\\backend\\app.py', reloading
+2025-04-08 15:11:44,631 - werkzeug - INFO -  * Detected change in 'D:\\Desktop\\Rahallah10.14\\Rahallah10.13\\trip-planner\\backend\\app.py', reloading
+2025-04-08 15:11:44,656 - werkzeug - INFO -  * Detected change in 'D:\\Desktop\\Rahallah10.14\\Rahallah10.13\\trip-planner\\backend\\app.py', reloading
+2025-04-08 15:11:44,965 - werkzeug - INFO -  * Restarting with stat

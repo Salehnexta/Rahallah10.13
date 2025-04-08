@@ -1,0 +1,17 @@
+<div class="trip-item flex items-center p-2 hover:bg-gray-50 border-b">
+    <div class="flex-1">
+        <h3 class="font-medium text-sm">{{ item.name }}</h3>
+        <p class="text-xs text-gray-600">{{ item.location }}</p>
+    </div>
+    <div class="flex items-center">
+        <button class="text-red-500 hover:text-red-700"
+                hx-post="/api/remove-from-trip"
+                hx-params="id={{ item.id }}"
+                hx-target="closest .trip-item"
+                hx-swap="outerHTML"
+                hx-trigger="click"
+                title="Remove {{ item.name }} from trip">
+            <i class="fas fa-trash"></i>
+        </button>
+    </div>
+</div>

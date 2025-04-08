@@ -50,6 +50,24 @@ def init_openai_client():
         logger.error(f"Error initializing OpenAI client: {str(e)}")
         raise
 
+def get_llm(model="deepseek-chat"):
+    """
+    Get a configured LLM client ready for use
+    
+    Args:
+        model (str): Model identifier to use with the client
+        
+    Returns:
+        tuple: (client, model_name) - The OpenAI client and the model name to use
+    """
+    try:
+        client = init_openai_client()
+        logger.info(f"LLM initialized with model: {model}")
+        return client, model
+    except Exception as e:
+        logger.error(f"Error getting LLM: {str(e)}")
+        raise
+
 def generate_response(system_prompt, user_message, conversation_history=None, temperature=0.7, model="deepseek-chat"):
     """
     Generate a response using the DeepSeek LLM with LangChain
